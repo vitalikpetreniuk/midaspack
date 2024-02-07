@@ -1,0 +1,85 @@
+@tailwind components;
+
+@layer components {
+    .mp-contact .cont > div {
+        @apply
+        relative
+        pt-[35px]
+        desktopMin:pt-[80px]
+        pb-[270px]
+        desktopMin:pb-[75px]
+        px-[20px]
+        desktopMin:px-[70px]
+        bg-[#CEE6F3]
+        rounded-[40px]
+        overflow-hidden
+
+        before:content-['']
+        before:block
+        before:absolute
+        before:w-[130%]
+        desktopMin:before:w-[54.5%]
+        before:top-0
+        before:bottom-0
+        before:right-[-20%]
+        desktopMin:before:right-[4.5%]
+        before:bg-[url('../images/call-center.png')]
+        before:bg-no-repeat
+        before:bg-contain
+        before:bg-bottom
+    }
+    .mp-contact h2 {
+        @apply
+        !text-[30px]/[1.2]
+        text-accent
+
+        desktopMin:pl-[38px]
+        desktopMin:bg-[url('../images/svg/headphones.svg')]
+        bg-no-repeat
+        bg-left
+    }
+    .mp-contact h2+span {
+        @apply
+        inline-block
+        max-w-[250px]
+        mt-[5px]
+        desktopMin:mt-[2px]
+        ml-0
+        desktopMin:ml-[38px]
+        font-proximanova-light
+        font-light
+        text-[14px]/[1.5]
+        text-content
+    }
+    .mp-contact ul {
+        @apply
+        mt-[10px]
+        desktopMin:mt-[25px]
+        ml-0
+        desktopMin:ml-[70px]
+        flex
+        flex-col
+        items-start
+        gap-y-[10px]
+    }
+    .mp-contact ul li {
+        @apply
+        h-[36px]
+        transition
+        duration-100
+
+        font-proximanova-bold
+        text-[16px]/[38px]
+        text-white
+    }
+    .mp-contact ul li a {
+        @apply
+        block
+        pl-[40px]
+        pr-[14px]
+
+        rounded-[20px]
+        bg-accent
+        hover:bg-accent_hover
+    }
+}

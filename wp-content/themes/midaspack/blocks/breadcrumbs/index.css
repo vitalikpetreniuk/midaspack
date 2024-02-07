@@ -1,0 +1,12 @@
+@tailwind components;
+
+@layer components {
+
+}
+
+.mp-breadcrumbs ul li:not(:first-child):before {
+    content: '-';
+    display: inline-block;
+    margin-left: 4px;
+    margin-right: 4px;
+}

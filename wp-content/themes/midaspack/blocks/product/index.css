@@ -1,0 +1,184 @@
+@tailwind components;
+
+@layer components {
+    .mp-product a.go-back {
+        @apply
+        inline-block
+        mb-[35px]
+        pl-[20px]
+        font-proximanova-bold
+        text-[25px]/[1.2]
+        bg-[url('../images/svg/back.svg')]
+        bg-no-repeat
+        bg-left
+
+    }
+
+    .product-main {
+        @apply
+        flex
+        flex-col
+        desktopMin:flex-row
+        items-center
+        gap-x-[20px]
+    }
+    .product-main .swiper-pagination {
+        @apply
+        !bottom-[15px]
+        desktopMin:!bottom-[30px]
+    }
+
+    .pm-gallery {
+        @apply
+        w-full
+        desktopMin:w-5/12
+        rounded-[20px]
+        overflow-hidden
+    }
+    .pm-gallery .swiper-slide {
+        @apply
+        relative
+        h-0
+        desktopMin:h-[580px]
+        pb-[100%]
+        desktopMin:pb-0
+        bg-[#E9E9E9]
+    }
+    .pm-gallery .swiper-slide img {
+        @apply
+        absolute
+        desktopMin:static
+        block
+        w-full
+        h-full
+        object-cover
+    }
+    .pm-gallery .go-prev, .pm-gallery .go-next {
+        @apply
+        mt-0
+        top-0
+        translate-y-0
+        h-full
+        w-[60px]
+        rounded-[0]
+        opacity-0
+        hover:opacity-100
+        transition
+        duration-100
+        cursor-pointer
+    }
+    .pm-gallery .go-prev {
+        @apply
+        left-0
+    }
+    .pm-gallery .go-next {
+        @apply
+        right-0
+    }
+
+    .pm-info {
+        @apply
+        w-full
+        mt-[20px]
+        desktopMin:mt-0
+        desktopMin:w-7/12
+        desktopMin:pl-[30px]
+        box-border
+    }
+    .pm-info h1 {
+        @apply
+        mt-0
+        mb-[10px]
+        desktopMin:mb-[20px]
+        font-proximanova-semibold
+        text-[25px]/[1.2]
+        desktopMin:text-[36px]/[1.2]
+    }
+    .pm-info .pm-options {
+        @apply
+        mb-[25px]
+        flex
+        flex-col
+        desktopMin:flex-row
+        gap-x-[65px]
+        gap-y-[15px]
+    }
+    .pm-info .pm-description {
+        @apply
+        mb-[30px]
+        desktopMin:mb-[25px]
+        font-proximanova-light
+        font-light
+        text-[16px]/[1.5]
+        text-black
+    }
+    .pm-info .pm-price {
+        @apply
+        mb-[10px]
+        font-proximanova-bold
+        text-[20px]/[1.2]
+        text-content
+    }
+    .pm-info button {
+        @apply
+        box-border
+        pt-[1px]
+        rounded-[40px]
+        w-full
+        max-w-[390px]
+        desktopMin:max-w-[300px]
+        h-[50px]
+        desktopMin:h-[40px]
+        bg-accent
+        hover:bg-accent_hover
+        transition
+        duration-100
+        font-proximanova-bold
+        text-[15px]/[1]
+        text-white
+        uppercase
+    }
+
+    .product-characteristics {
+        @apply
+        mt-[75px]
+        mb-[65px]
+        desktopMin:mb-[75px]
+        flex
+        flex-col
+        desktopMin:flex-row
+        justify-between
+        items-start
+        gap-x-[20px]
+    }
+    .product-characteristics .pc-video {
+        @apply
+        mt-[35px]
+        desktopMin:mt-0
+    }
+    .product-characteristics .pc-video > div {
+        @apply
+        relative
+        h-0
+        desktopMin:h-[400px]
+        pb-[57.5%]
+        desktopMin:pb-0
+        rounded-[20px]
+        overflow-hidden
+        cursor-pointer
+    }
+    .product-characteristics .pc-video > div video {
+        @apply
+        absolute
+    }
+}
+
+.pm-gallery .go-prev svg path, .pm-gallery .go-next svg path {
+    stroke: white;
+}
+.pm-gallery .go-prev{
+    background: linear-gradient(to right, rgba(0,0,0,.07) 0%,rgba(0,0,0,0) 100%) no-repeat !important;
+}
+.pm-gallery .go-next {
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,.07) 100%) no-repeat !important;
+}

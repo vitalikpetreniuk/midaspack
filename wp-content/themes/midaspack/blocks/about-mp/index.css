@@ -1,0 +1,16 @@
+@tailwind components;
+
+@layer components {
+    .mp-html5, .mp-yv {
+        @apply
+        h-full
+    }
+    .mp-html5 video,
+    .mp-yv iframe {
+        @apply
+        block
+        w-full
+        h-full
+        object-cover
+    }
+}

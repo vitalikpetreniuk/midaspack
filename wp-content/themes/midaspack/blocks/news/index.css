@@ -1,0 +1,111 @@
+@tailwind components;
+
+@layer components {
+    .go-prev, .go-next {
+        @apply
+        absolute
+        z-[2]
+        cursor-pointer
+        flex
+        justify-center
+        items-center
+        w-[25px]
+        h-[25px]
+        mt-0
+        desktopMin:mt-[-25px]
+
+        top-auto
+        desktopMin:top-[50%]
+        bottom-[-5px]
+        desktopMin:bottom-auto
+        desktopMin:translate-y-[-50%]
+
+        rounded-[50%]
+        bg-[#E9E9E9]
+        hover:bg-arrow-hover
+        transition
+        duration-100
+    }
+    .go-prev {
+        @apply
+        left-0
+        desktopMin:left-[-45px]
+    }
+    .go-next {
+        @apply
+        right-0
+        desktopMin:right-[-45px]
+    }
+
+    .news .swiper-slide {
+        @apply
+        relative
+        h-auto
+        pt-[90px]
+        desktopMin:pt-[110px]
+        px-[22px]
+        desktopMin:px-[28px]
+        pb-[22px]
+        desktopMin:pb-[28px]
+        bg-[#E9E9E9]
+        rounded-[20px]
+    }
+    .news .swiper-slide a {
+        @apply
+        absolute
+        top-[22px]
+        desktopMin:top-[28px]
+        right-[22px]
+        desktopMin:right-[28px]
+        flex
+        justify-center
+        items-center
+        w-[42px]
+        desktopMin:w-[54px]
+        h-[42px]
+        desktopMin:h-[54px]
+        rounded-[10px]
+        bg-accent
+        hover:bg-accent_hover
+        transition
+        duration-100
+    }
+    .news .swiper-slide a svg {
+        @apply
+        w-[11px]
+        desktopMin:w-[17px]
+        h-[11px]
+        desktopMin:h-[17px]
+    }
+    .news .swiper-slide .news-date {
+        @apply
+        font-proximanova-light
+        font-light
+        text-content/[.5]
+    }
+    .news .swiper-slide .news-text {
+        @apply
+        mt-[15px]
+        font-proximanova-semibold
+        text-content
+        text-[20px]/[24px]
+        h-auto
+        desktopMin:h-[72px]
+        overflow-hidden
+    }
+    .news .swiper-slide .news-image {
+        @apply
+        h-[160px]
+        desktopMin:h-[200px]
+        mt-[18px]
+        desktopMin:mt-[28px]
+        bg-[#F1F1F1]
+        rounded-[20px]
+        overflow-hidden
+    }
+
+    .news .swiper .swiper-pagination {
+        @apply
+        bottom-0
+    }
+}

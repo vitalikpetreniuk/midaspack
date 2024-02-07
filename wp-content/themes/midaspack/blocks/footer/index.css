@@ -1,0 +1,27 @@
+@tailwind components;
+
+@layer components {
+    .foo-nav {
+        @apply
+        mt-[25px]
+        desktopMin:mt-0
+        flex
+        flex-col
+        justify-start
+        items-center desktopMin:items-start
+        gap-y-[12px]
+    }
+    .foo-nav li {
+        @apply
+        font-proximanova-light
+        text-[14px]/[150%]
+        font-light
+        desktopMin:opacity-50
+        desktopMin:hover:opacity-100
+        desktopMin:hover:transition-opacity
+    }
+    .foo-nav li.selected {
+        @apply
+        opacity-[100]
+    }
+}

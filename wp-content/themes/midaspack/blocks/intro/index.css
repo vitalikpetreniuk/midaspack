@@ -1,0 +1,36 @@
+@tailwind components;
+
+@layer components {
+    .mp-intro .swiper-slide {
+        @apply
+        relative
+
+        after:content-['']
+        after:block
+        after:absolute
+        after:top-0
+        after:left-0
+        after:w-full
+        after:h-full
+        after:bg-intro_after
+    }
+    .mp-intro .swiper-pagination {
+        @apply
+        !bottom-[35px]
+    }
+    .mp-intro .swiper-pagination-bullet:after {
+        @apply
+        !bg-white/50
+    }
+    .mp-intro .swiper-pagination-bullet-active:after {
+        @apply
+        !bg-white/100
+    }
+}
+
+.h-screen-102 {
+    height: calc(100vh - 102px);
+}
+.max-h-screen-102 {
+    max-height: calc(100vh - 102px);
+}

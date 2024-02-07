@@ -1,0 +1,89 @@
+@tailwind components;
+
+@layer components {
+    .news {
+        @apply
+        flex
+        flex-wrap
+        gap-[20px]
+    }
+    .news .nl-item {
+        @apply
+        relative
+        w-full
+        desktopMin:w-third-gap
+        box-border
+        h-auto
+        pt-[90px]
+        desktopMin:pt-[110px]
+        pb-[22px]
+        desktopMin:pb-[28px]
+        px-[22px]
+        desktopMin:px-[28px]
+        bg-[#F8F8F8]
+        rounded-[20px]
+    }
+    .news .nl-item a {
+        @apply
+        absolute
+        top-[22px]
+        desktopMin:top-[28px]
+        right-[22px]
+        desktopMin:right-[28px]
+        flex
+        justify-center
+        items-center
+        w-[44px]
+        desktopMin:w-[54px]
+        h-[44px]
+        desktopMin:h-[54px]
+        rounded-[10px]
+        bg-accent
+        hover:bg-accent_hover
+        transition
+        duration-100
+    }
+    .news .nl-item a svg{
+        @apply
+        block
+        w-[11px]
+        desktopMin:w-[17px]
+        h-[11px]
+        desktopMin:h-[17px]
+    }
+    .news .nl-item .nl-date {
+        @apply
+        font-proximanova-light
+        font-light
+        text-[16px]/[1]
+        text-content/[.5]
+    }
+    .news .nl-item .nl-title {
+        @apply
+        mt-[8px]
+        desktopMin:mt-[15px]
+        font-proximanova-semibold
+        text-content
+        text-[20px]/[1.2]
+        h-[72px]
+        overflow-hidden
+    }
+    .news .nl-item .nl-image {
+        @apply
+        h-[200px]
+        mt-[28px]
+        bg-[#F1F1F1]
+        rounded-[20px]
+        overflow-hidden
+    }
+
+
+    .pagination > span a svg path {
+        @apply
+        transition
+        duration-100
+    }
+}
+.pagination > span:hover a svg path {
+    stroke: white;
+}

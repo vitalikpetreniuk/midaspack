@@ -1,0 +1,184 @@
+@tailwind components;
+
+@layer components {
+    ul.sort {
+        @apply
+        mb-[45px]
+        desktopMin:mb-[35px]
+        flex
+        flex-wrap
+        justify-start
+        items-center
+        gap-[5px]
+        desktopMin:gap-[10px]
+        font-proximanova-bold
+        text-[16px]
+    }
+    ul.sort li {
+        @apply
+        cursor-pointer
+        leading-[1.5]
+        px-[17px]
+        desktopMin:px-[20px]
+        pt-[6px]
+        pb-[5px]
+        rounded-[20px]
+        border
+    }
+    ul.sort li:nth-child(6n+1) {
+        @apply
+        border-[#58AAEB]
+        text-[#58AAEB]
+    }
+    ul.sort li:nth-child(6n+2) {
+        @apply
+        border-[#3C5A9A]
+        text-[#3C5A9A]
+    }
+    ul.sort li:nth-child(6n+3) {
+        @apply
+        border-[#64A1C1]
+        text-[#64A1C1]
+    }
+    ul.sort li:nth-child(6n+4) {
+        @apply
+        border-[#7BB6E0]
+        text-[#7BB6E0]
+    }
+    ul.sort li:nth-child(6n+5) {
+        @apply
+        border-grey
+        text-grey
+    }
+    ul.sort li:nth-child(6n+6) {
+        @apply
+        border-accent
+        text-accent
+    }
+
+    ul.sort li.selected {
+        @apply
+        pl-[36px]
+        text-white
+        bg-[url('../images/svg/check.svg')]
+        bg-no-repeat
+        bg-[11px_center]
+    }
+    ul.sort li:nth-child(6n+1).selected {
+        @apply
+        bg-[#58AAEB]
+    }
+    ul.sort li:nth-child(6n+2).selected {
+        @apply
+        bg-[#3C5A9A]
+    }
+    ul.sort li:nth-child(6n+3).selected {
+        @apply
+        bg-[#64A1C1]
+    }
+    ul.sort li:nth-child(6n+4).selected {
+        @apply
+        bg-[#7BB6E0]
+    }
+    ul.sort li:nth-child(6n+5).selected {
+        @apply
+        bg-[#868686]
+    }
+    ul.sort li:nth-child(6n+6).selected {
+        @apply
+        bg-[#1E1E5C]
+    }
+
+    ul.product-sizes .selected {
+        @apply
+        text-accent
+        border-accent
+        bg-size
+    }
+
+    .products {
+        @apply
+        relative
+        flex
+        flex-wrap
+        justify-start
+        gap-x-[20px]
+        gap-y-[30px]
+        desktopMin:gap-y-[25px]
+    }
+    .products .product {
+        @apply
+        relative
+        w-full
+        tabletMin:w-half-gap
+        desktopMin:w-quarter-gap
+        h-auto
+        pb-[59px]
+    }
+    .products .product.has-price {
+        @apply
+        pb-[89px]
+    }
+    .products .product .product-image {
+        @apply
+        h-[330px]
+        bg-[#F1F1F1]
+        rounded-[20px]
+        overflow-hidden
+    }
+    .products .product .product-title {
+        @apply
+        mt-[15px]
+        max-h-[39px]
+        overflow-hidden
+        font-proximanova-semibold
+        text-content
+        text-[16px]/[1.2]
+    }
+    .products .product.has-price .product-title {
+        @apply
+        h-[39px]
+    }
+    .products .product .product-description {
+        @apply
+        mt-[7px]
+        max-h-[42px]
+        overflow-hidden
+        font-proximanova-light
+        font-light
+        text-content
+        text-[14px]/[1.5]
+    }
+    .products .product.has-price .product-description {
+        @apply
+        hidden
+    }
+    .products .product .btm-info .product-price {
+        @apply
+        hidden
+        font-proximanova-bold
+        text-content
+        text-[20px]/[1.2]
+    }
+    .products .product.has-price .btm-info .product-price {
+        @apply
+        block
+    }
+    .products .product .btm-info a {
+        @apply
+        block
+        mt-[15px]
+        h-[40px]
+        rounded-[40px]
+        bg-accent
+        hover:bg-accent_hover
+        transition
+        duration-100
+
+        font-proximanova-bold
+        text-white
+        text-[15px]/[42px]
+        text-center
+        uppercase
+    }
+}

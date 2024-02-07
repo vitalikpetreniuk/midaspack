@@ -1,0 +1,43 @@
+@tailwind components;
+
+@layer components {
+    .mp-categories ul li {
+        @apply
+        relative
+        h-[210px]
+        desktopMin:h-[236px]
+        rounded-[40px]
+        overflow-hidden
+    }
+    .mp-categories ul li > div {
+        @apply
+        absolute
+        top-[24px]
+        desktopMin:top-[30px]
+        left-[24px]
+        desktopMin:left-[36px]
+    }
+    .mp-categories ul li img {
+        @apply
+        block
+        h-full
+        w-full
+        object-cover
+    }
+    .mp-categories ul li a {
+        @apply
+        block
+        w-[100px]
+        h-[38px]
+        rounded-[40px]
+        mt-[15px]
+        font-gilroy-bold
+        text-content
+        transition
+        duration-100
+        text-center
+        text-[15px]/[41px]
+        uppercase
+        bg-white
+    }
+}

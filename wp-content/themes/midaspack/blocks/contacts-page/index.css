@@ -1,0 +1,42 @@
+@tailwind components;
+
+@layer components {
+    .contact-form form p:first-of-type {
+        @apply
+        flex
+        flex-col
+        desktopMin:flex-row
+        gap-[10px]
+    }
+    .contact-form form p:first-of-type span {
+        @apply
+        block
+        w-full
+        desktopMin:w-half-gap-mini
+    }
+    .contact-form form p:last-of-type span {
+        @apply
+        block
+        w-full
+    }
+    .contact-form form p:first-of-type span input,
+    .contact-form form p:last-of-type span textarea {
+        @apply
+        block
+        w-full
+    }
+    .contact-form form p:first-of-type span input[type="tel"] {
+        @apply
+        pl-[30px]
+        bg-[url('../images/svg/ua.svg')]
+        bg-no-repeat
+        bg-[left_11px_center]
+    }
+    .contact-form form p:last-of-type {
+        @apply
+        flex
+        flex-col
+        items-center
+        desktopMin:items-start
+    }
+}

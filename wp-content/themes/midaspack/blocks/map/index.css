@@ -1,0 +1,15 @@
+@tailwind components;
+
+@layer components {
+    .mp-map {
+        @apply
+        relative
+        !mb-[-65px]
+        desktopMin:!mb-[-80px]
+    }
+    .mp-map iframe {
+        @apply
+        block
+        w-full
+    }
+}

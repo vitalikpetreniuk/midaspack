@@ -1,0 +1,12 @@
+@tailwind components;
+
+@layer components {
+    .mp-about-mission .cont {
+        @apply
+        flex
+        flex-col
+        desktopMin:flex-row
+        justify-between
+        items-center
+    }
+}

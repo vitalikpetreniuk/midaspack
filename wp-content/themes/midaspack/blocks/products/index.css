@@ -1,0 +1,46 @@
+@tailwind components;
+
+@layer components {
+    .products .swiper {
+        @apply
+        w-full
+    }
+    .products .swiper .swiper-wrapper {
+        @apply
+        h-auto
+        items-start
+    }
+    .products .go-prev, .products .go-next {
+        @apply
+        absolute
+        z-[2]
+        cursor-pointer
+        flex
+        justify-center
+        items-center
+        w-[25px]
+        h-[25px]
+        mt-0
+
+        top-auto
+        desktopMin:top-[152px]
+        bottom-[-5px]
+        desktopMin:bottom-auto
+
+        rounded-[50%]
+        bg-[#E9E9E9]
+        hover:bg-arrow-hover
+        transition
+        duration-100
+    }
+    .products .go-prev {
+        @apply
+        left-0
+        desktopMin:left-[-45px]
+    }
+    .products .go-next {
+        @apply
+        right-0
+        desktopMin:right-[-45px]
+    }
+}

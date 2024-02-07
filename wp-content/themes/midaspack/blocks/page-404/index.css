@@ -1,0 +1,11 @@
+@tailwind components;
+
+@layer components {
+    .h-screen-110 {
+        @apply
+        h-[calc(100vh - 110px)]
+    }
+}
+.max-h-screen-110 {
+    max-height: calc(100vh - 110px);
+}

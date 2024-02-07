@@ -1,0 +1,273 @@
+@import "../../../../../plugins/brainwave/assembly/node_modules/swiper/swiper-bundle.css";
+
+@tailwind components;
+
+@layer components {
+    body {
+        @apply
+        pt-[102px]
+        desktopMin:pt-0
+    }
+
+    body.blured .blured {
+        display: block;
+        -webkit-backdrop-filter: blur(5px);
+        backdrop-filter: blur(5px);
+    }
+    .container {
+        @apply w-full resp-[w-max/1450] mx-auto resp-[px/15]
+    }
+
+    /*Topography*/
+    .title-1 {
+        @apply resp-[font/120/45] text-yellow resp-[line-height/101/120] font-ravels-extrabold
+    }
+    .title-2 {
+        @apply
+        resp-[font/65/25] text-black resp-[line-height/65/45]  font-ravels-medium
+    }
+
+
+    .title-2-violet span{
+        @apply
+        text-violet  font-ravels-black
+    }
+
+    .title-2-yellow span{
+        @apply
+        text-yellow  font-ravels-black
+    }
+
+    .title-2-white span{
+        @apply
+        text-darkWhite  font-ravels-black
+    }
+
+
+    .subtitle-1 {
+        @apply
+        resp-[font/84/30]  resp-[line-height/84/84] text-bg font-ravels-extrabold
+    }
+
+    .heading-1 {
+        @apply
+        resp-[font/16] text-black resp-[line-height/26/16] tracking-[0.03rem] font-poppins-regular
+        tablet:resp-[line-height/28/16] tablet:tracking-[0.03375rem]
+    }
+
+    .text-1 {
+        @apply
+        resp-[font/25/18] text-white font-ravels-regular
+    }
+
+    .button {
+        @apply resp-[font/16] text-black resp-[line-height/16/16] tracking-[0.03rem] text-center
+        resp-[px/20] resp-[pb/16] resp-[w-min/195]  w-fit block  border-b-[1px]
+    }
+
+    header {
+        @apply  flex-header z-50
+    }
+
+    main {
+        @apply flex-main
+    }
+
+    footer {
+        @apply flex-footer
+    }
+
+    body {
+        @apply flex flex-col min-h-[100vh]
+    }
+
+    .cont {
+        @apply
+        px-[20px]
+        desktopMin:px-[15px]
+        mx-auto
+
+        desktop:max-w-[1200px]
+        desktopMid:max-w-[1320px]
+    }
+
+    h1, .title-h1 {
+        @apply
+        font-gilroy-bold
+        /*font-bold*/
+        !text-[25px]/[1.2]
+        desktopMin:!text-[30px]/[1.2]
+        text-content
+    }
+    .title-h1{
+        @apply
+        mb-[30px]
+    }
+
+    h2 {
+        @apply
+        font-proximanova-bold
+        /*font-bold*/
+        !text-[25px]/[1.2]
+        text-content
+    }
+    .title-h4 {
+        @apply
+        mb-[15px]
+        desktopMin:mb-[20px]
+        font-proximanova-bold
+        /*font-bold*/
+        text-[20px]/[1.2]
+    }
+
+    p, .text {
+        @apply
+        !mt-[10px]
+        font-proximanova-light
+        font-light
+        text-[16px]/[1.5]
+        text-content
+    }
+
+    .mp-button {
+        @apply
+        inline-block
+        h-[50px]
+        px-[30px]
+        rounded-[40px]
+        bg-accent
+        hover:bg-accent_hover
+        transition
+        duration-100
+        font-proximanova-bold
+        /*font-bold*/
+        text-white
+        text-[15px]/[51px]
+        uppercase
+    }
+    .mp-button.inversed {
+        @apply
+        bg-accent_hover
+        hover:bg-accent
+    }
+    .mp-button-light {
+        @apply
+        bg-accent/10
+        text-accent
+
+        hover:bg-accent_hover/10
+        hover:text-accent_hover
+    }
+
+    form input {
+        @apply
+        block
+        h-[40px]
+        bg-[#F6F6F6]
+        rounded-[10px]
+        px-[15px]
+        !outline-none
+        !border-none
+
+        font-proximanova-regular
+        font-normal
+        text-[14px]/[1]
+        text-content
+        placeholder:text-date
+    }
+    form textarea {
+        @apply
+        block
+        w-full
+        box-border
+        !h-[110px]
+        bg-[#F6F6F6]
+        rounded-[10px]
+        p-[15px]
+        !outline-none
+        !border-none
+
+        font-proximanova-regular
+        font-normal
+        text-[14px]/[1]
+        text-content
+        placeholder:text-date
+    }
+    form input[type="submit"] {
+        @apply
+        block
+        w-[158px]
+        h-[50px]
+        mt-[10px]
+        pt-[2px]
+        box-border
+        cursor-pointer
+        rounded-[40px]
+        bg-accent
+        hover:bg-accent_hover
+        transition
+        duration-100
+        font-proximanova-bold
+        /*font-bold*/
+        text-white
+        text-[15px]/[1]
+        uppercase
+    }
+    form br, form .wpcf7-spinner {
+        @apply
+        hidden
+    }
+}
+
+header {
+    filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.05));
+}
+.scrollbar-hide::-webkit-scrollbar {
+    width: 0;
+}
+
+.subtitle-1 {
+    text-shadow:
+            -1px -1px 0 #FCFF00,
+            1px -1px 0 #FCFF00,
+            -1px 1px 0 #FCFF00,
+            1px 1px 0 #FCFF00;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    display: none;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+}
+.swiper-pagination-bullet {
+    position: relative;
+    margin: 0;
+    width: 15px;
+    height: 15px;
+    background: none !important;
+
+    opacity: .36 !important;
+}
+.swiper-pagination-bullet:after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #868686 !important;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+}

@@ -1,0 +1,341 @@
+@tailwind components;
+
+@layer components {
+    header {
+        @apply
+        fixed
+        z-[14]
+        top-0
+        left-0
+        right-0
+        desktopMin:relative
+    }
+    .mp-lang ul li:hover a span {
+        @apply
+        opacity-100
+    }
+    .mp-nav li {
+        @apply
+        font-proximanova-light
+        text-[14px]/[150%]
+        font-light
+        opacity-50
+        hover:opacity-100
+        hover:transition-opacity
+    }
+    .mp-nav li.selected {
+        @apply
+        opacity-[100]
+    }
+    .mp-call {
+        @apply
+        flex
+        justify-start
+        items-center
+        gap-x-[0]
+        desktopMin:gap-x-[10px]
+        box-border
+        desktopMin:h-[50px]
+        px-0
+        desktopMin:pl-[20px]
+        desktopMin:pr-[6px]
+        rounded-[40px]
+        desktopMin:bg-accent
+        desktopMin:hover:bg-accent_hover
+        transition
+        duration-100
+        font-proximanova-bold
+        text-white
+        text-[0]
+        desktopMin:text-[15px]/[1]
+        uppercase
+        cursor-pointer
+    }
+    .mp-call > span {
+        @apply
+        flex
+        w-[40px]
+        h-[40px]
+        rounded-[50%]
+        bg-accent/10
+        desktopMin:bg-[#E8E8EF]
+        bg-no-repeat
+        bg-right
+        justify-center
+        items-center
+    }
+    .mp-call:hover span span {
+        @apply
+        bg-[url('../images/svg/phone-lb.svg')]
+    }
+
+    .mobile-menu {
+        @apply
+        relative
+        desktopMin:hidden
+    }
+    .mobile-menu .menu-close {
+        @apply
+        opacity-0
+        absolute
+        top-[50%]
+        left-[50%]
+        translate-x-[-50%]
+        translate-y-[-50%]
+    }
+    .mm-open .mobile-menu .menu-burger {
+        @apply
+        opacity-0
+    }
+    .mm-open .mobile-menu .menu-close {
+        @apply
+        opacity-100
+    }
+
+    .mp-kyivstar ul {
+        @apply
+        flex
+        bg-white
+        desktopMin:bg-transparent
+        p-[30px]
+        desktopMin:p-[0]
+        rounded-[40px]
+        desktopMin:rounded-[0]
+        fixed
+        desktopMin:static
+        top-[120px]
+        left-[20px]
+        right-[20px]
+        flex-col
+        items-center
+        gap-y-[15px]
+        desktopMin:flex-row
+        desktopMin:justify-center
+        desktopMin:gap-x-[46px]
+        opacity-0
+        desktopMin:opacity-100
+        invisible
+        desktopMin:visible
+        transition
+        duration-100
+    }
+    .mp-kyivstar.opened ul {
+        @apply
+        opacity-100
+        visible
+    }
+    .mp-kyivstar ul li a {
+        @apply
+        flex
+        justify-start
+        items-center
+        h-[54px]
+        desktopMin:h-auto
+        pl-[56px]
+        pr-[25px]
+        desktopMin:pt-[2px]
+        desktopMin:pl-[23px]
+        desktopMin:pr-[0]
+
+        bg-accent
+        bg-[url('../images/svg/phone-white.svg')]
+        desktopMin:bg-transparent
+        desktopMin:bg-[url('../images/svg/kyivstar.svg')]
+        bg-no-repeat
+        bg-[25px_center]
+        desktopMin:bg-left
+        bg-[length:20px_20px]
+        desktopMin:bg-[length:16px_16px]
+        rounded-[40px]
+        desktopMin:rounded-none
+
+        font-proximanova-bold
+        desktopMin:font-proximanova-light
+        desktopMin:font-light
+        text-white
+        text-[20px]/[1.5]
+        desktopMin:text-[15px]/normal
+    }
+
+    .mp-mobile {
+        height: calc(100svh - 100px);
+        overflow-y: scroll;
+
+        @apply
+        box-border
+        absolute
+        top-[100%]
+        left-0
+        right-0
+        z-[20]
+        px-[20px]
+        py-[35px]
+        bg-white
+    }
+    .mm-open .mp-mobile {
+        @apply
+        block
+    }
+    .mp-mobile .mpm-nav {
+        @apply
+        flex
+        flex-col
+        gap-y-[20px]
+    }
+    .mp-mobile .mpm-nav li {
+        @apply
+        font-proximanova-light
+        font-light
+        text-[18px]/[1.5]
+    }
+
+    .mp-mobile .mpm-lang {
+        @apply
+        flex
+        justify-start
+        gap-x-[22px]
+    }
+    .mp-mobile .mpm-lang li {
+        @apply
+        font-proximanova-light
+        font-light
+        text-[15px]/normal
+    }
+    .mp-mobile .mpm-lang li.selected {
+        @apply
+        font-proximanova-semibold
+    }
+    .mp-mobile .mpm-lang li.selected a span {
+        @apply
+        opacity-100
+    }
+
+    .mp-mobile .mpm-call {
+        @apply
+        flex
+        justify-between
+        items-center
+        gap-x-[10px]
+        box-border
+        w-full
+        max-w-[390px]
+        h-[50px]
+        mt-[70px]
+        pl-[20px]
+        pr-[6px]
+        rounded-[40px]
+        bg-accent
+        hover:bg-accent_hover
+        transition
+        duration-100
+        font-proximanova-bold
+        text-white
+        text-[15px]/[1]
+        uppercase
+        cursor-pointer
+    }
+    .mp-mobile .mpm-call > span {
+        @apply
+        flex
+        w-[40px]
+        h-[40px]
+        rounded-[50%]
+        bg-[#E8E8EF]
+        bg-no-repeat
+        bg-right
+        justify-center
+        items-center
+    }
+
+    .mp-popup {
+        @apply
+        fixed
+        z-[13]
+        left-0
+        right-0
+        bottom-0
+        h-[100svh]
+        pt-[110px]
+        box-border
+        bg-black/[.37]
+        invisible
+        opacity-0
+        transition
+        duration-100
+    }
+    .mp-popup .cont {
+        @apply
+        relative
+        h-full
+    }
+    .mp-popup .cont > div {
+        @apply
+        absolute
+        top-[50%]
+        left-[50%]
+        translate-x-[-50%]
+        translate-y-[-50%]
+        w-[calc(100%-40px)]
+        desktopMin:w-8/12
+        bg-white
+        rounded-[20px]
+        overflow-hidden
+        flex
+        flex-col
+        desktopMin:flex-row
+        justify-start
+        gap-x-[20px]
+    }
+    .mp-popup .cont .popup-form {
+        @apply
+        w-full
+        desktopMin:w-1/2
+        px-[25px]
+        py-[50px]
+        desktopMin:pt-[55px]
+        desktopMin:pl-[45px]
+        desktopMin:pr-[20px]
+        desktopMin:pb-[35px]
+        box-border
+        text-content
+    }
+    .mp-popup .cont .popup-form input[type="tel"] {
+        @apply
+        pl-[30px]
+        bg-[url('../images/svg/ua.svg')]
+        bg-no-repeat
+        bg-[left_11px_center]
+    }
+    .mp-popup .cont .popup-img {
+        @apply
+        block
+        w-full
+        desktopMin:w-1/2
+        desktopMin:relative
+        bg-[#B2D6E9]
+    }
+    .mp-popup .cont .popup-img img {
+        @apply
+        hidden
+        desktopMin:block
+        w-full
+        absolute
+        bottom-0
+        right-0
+    }
+}
+
+body.call-onscreen,
+body.mm-open, body.blured {
+    height: 100%;
+    overflow: hidden;
+}
+body.call-onscreen .mp-popup {
+    visibility: visible;
+    opacity: 1;
+}
+body.call-onscreen .blured {
+    display: block;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
