@@ -22,6 +22,7 @@
         items-center
         gap-x-[20px]
     }
+
     .product-main .swiper-pagination {
         @apply
         !bottom-[15px]
@@ -35,6 +36,7 @@
         rounded-[20px]
         overflow-hidden
     }
+
     .pm-gallery .swiper-slide {
         @apply
         relative
@@ -44,6 +46,7 @@
         desktopMin:pb-0
         bg-[#E9E9E9]
     }
+
     .pm-gallery .swiper-slide img {
         @apply
         absolute
@@ -53,6 +56,7 @@
         h-full
         object-cover
     }
+
     .pm-gallery .go-prev, .pm-gallery .go-next {
         @apply
         mt-0
@@ -67,10 +71,12 @@
         duration-100
         cursor-pointer
     }
+
     .pm-gallery .go-prev {
         @apply
         left-0
     }
+
     .pm-gallery .go-next {
         @apply
         right-0
@@ -85,6 +91,7 @@
         desktopMin:pl-[30px]
         box-border
     }
+
     .pm-info h1 {
         @apply
         mt-0
@@ -94,6 +101,7 @@
         text-[25px]/[1.2]
         desktopMin:text-[36px]/[1.2]
     }
+
     .pm-info .pm-options {
         @apply
         mb-[25px]
@@ -103,6 +111,7 @@
         gap-x-[65px]
         gap-y-[15px]
     }
+
     .pm-info .pm-description {
         @apply
         mb-[30px]
@@ -112,6 +121,7 @@
         text-[16px]/[1.5]
         text-black
     }
+
     .pm-info .pm-price {
         @apply
         mb-[10px]
@@ -119,6 +129,7 @@
         text-[20px]/[1.2]
         text-content
     }
+
     .pm-info button {
         @apply
         box-border
@@ -151,11 +162,13 @@
         items-start
         gap-x-[20px]
     }
+
     .product-characteristics .pc-video {
         @apply
         mt-[35px]
         desktopMin:mt-0
     }
+
     .product-characteristics .pc-video > div {
         @apply
         relative
@@ -167,6 +180,7 @@
         overflow-hidden
         cursor-pointer
     }
+
     .product-characteristics .pc-video > div video {
         @apply
         absolute
@@ -176,9 +190,11 @@
 .pm-gallery .go-prev svg path, .pm-gallery .go-next svg path {
     stroke: white;
 }
-.pm-gallery .go-prev{
-    background: linear-gradient(to right, rgba(0,0,0,.07) 0%,rgba(0,0,0,0) 100%) no-repeat !important;
+
+.pm-gallery .go-prev {
+    background: linear-gradient(to right, rgba(0, 0, 0, .07) 0%, rgba(0, 0, 0, 0) 100%) no-repeat !important;
 }
+
 .pm-gallery .go-next {
-    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,.07) 100%) no-repeat !important;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .07) 100%) no-repeat !important;
 }

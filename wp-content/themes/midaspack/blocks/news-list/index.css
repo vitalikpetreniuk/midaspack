@@ -7,6 +7,7 @@
         flex-wrap
         gap-[20px]
     }
+
     .news .nl-item {
         @apply
         relative
@@ -23,6 +24,7 @@
         bg-[#F8F8F8]
         rounded-[20px]
     }
+
     .news .nl-item a {
         @apply
         absolute
@@ -43,7 +45,8 @@
         transition
         duration-100
     }
-    .news .nl-item a svg{
+
+    .news .nl-item a svg {
         @apply
         block
         w-[11px]
@@ -51,6 +54,7 @@
         h-[11px]
         desktopMin:h-[17px]
     }
+
     .news .nl-item .nl-date {
         @apply
         font-proximanova-light
@@ -58,6 +62,7 @@
         text-[16px]/[1]
         text-content/[.5]
     }
+
     .news .nl-item .nl-title {
         @apply
         mt-[8px]
@@ -68,6 +73,7 @@
         h-[72px]
         overflow-hidden
     }
+
     .news .nl-item .nl-image {
         @apply
         h-[200px]
@@ -78,12 +84,31 @@
     }
 
 
-    .pagination > span a svg path {
+    .pagination .prev svg path,
+    .pagination .next svg path {
         @apply
         transition
         duration-100
     }
+
+    .pagination .prev {
+        margin-right: 20px;
+    }
+
+    .pagination .next {
+        margin-left: 20px;
+    }
+
+    .pagination .page-numbers:not(.prev, .next) {
+        @apply block px-[6px];
+    }
+
+    .pagination .page-numbers:not(.prev, .next).current {
+        @apply rounded-[10px] h-[22px] bg-accent text-white;
+    }
 }
-.pagination > span:hover a svg path {
+
+.pagination .prev:hover svg path,
+.pagination .next:hover svg path {
     stroke: white;
 }

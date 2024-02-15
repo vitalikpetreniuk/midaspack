@@ -26,11 +26,13 @@
         transition
         duration-100
     }
+
     .go-prev {
         @apply
         left-0
         desktopMin:left-[-45px]
     }
+
     .go-next {
         @apply
         right-0
@@ -50,6 +52,7 @@
         bg-[#E9E9E9]
         rounded-[20px]
     }
+
     .news .swiper-slide a {
         @apply
         absolute
@@ -70,6 +73,7 @@
         transition
         duration-100
     }
+
     .news .swiper-slide a svg {
         @apply
         w-[11px]
@@ -77,12 +81,14 @@
         h-[11px]
         desktopMin:h-[17px]
     }
+
     .news .swiper-slide .news-date {
         @apply
         font-proximanova-light
         font-light
         text-content/[.5]
     }
+
     .news .swiper-slide .news-text {
         @apply
         mt-[15px]
@@ -93,6 +99,7 @@
         desktopMin:h-[72px]
         overflow-hidden
     }
+
     .news .swiper-slide .news-image {
         @apply
         h-[160px]

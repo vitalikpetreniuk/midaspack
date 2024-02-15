@@ -5,6 +5,7 @@
         @apply
         h-full
     }
+
     .mp-html5 video,
     .mp-yv iframe {
         @apply

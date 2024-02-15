@@ -86,6 +86,7 @@ endif; // class_exists check
  *  @return  ACF_Admin_Notice
  */
 function acf_new_admin_notice( $data = false ) {
+	return;
 
 	// Create notice.
 	$instance = new ACF_Admin_Notice( $data );

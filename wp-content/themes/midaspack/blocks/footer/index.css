@@ -11,6 +11,7 @@
         items-center desktopMin:items-start
         gap-y-[12px]
     }
+
     .foo-nav li {
         @apply
         font-proximanova-light
@@ -20,8 +21,13 @@
         desktopMin:hover:opacity-100
         desktopMin:hover:transition-opacity
     }
-    .foo-nav li.selected {
+
+    .foo-nav li.active {
         @apply
         opacity-[100]
+    }
+
+    .foo-nav li a {
+        @apply text-content;
     }
 }

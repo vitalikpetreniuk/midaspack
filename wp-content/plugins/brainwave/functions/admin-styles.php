@@ -5,10 +5,10 @@ add_action('admin_head', function () {
     wp_enqueue_style('admin-brainwave-style',  '/wp-content/plugins/brainwave/index.css');
 });
 
-add_action('after_setup_theme', function () {
-    add_theme_support('editor-styles');
-    add_editor_style('/assets/css/bw-style.css');
-});
+//add_action('after_setup_theme', function () {
+//    add_theme_support('editor-styles');
+//    add_editor_style('/assets/css/bw-style.css');
+//});
 
 function custom_gutenberg_admin_scripts()
 {
@@ -23,7 +23,7 @@ function custom_gutenberg_admin_scripts()
 
 add_action('enqueue_block_editor_assets', 'custom_gutenberg_admin_scripts');
 
-add_filter('show_admin_bar', '__return_false');
+//add_filter('show_admin_bar', '__return_false');
 
 function create_page_and_set_as_home()
 {

@@ -2,28 +2,28 @@
 function my_acf_init()
 {
     if (function_exists('acf_register_block')) {
-        foreach (glob(get_template_directory() . "/components/*") as $file) {
-            $filename = basename($file);
-            $title = ucfirst(str_replace('-', ' ', $filename));
-
-            acf_register_block([
-                'name' => $filename,
-                'title' => $title,
-                'description' => __('A custom ' . $title),
-                'render_template' => get_template_directory() . "/components/{$filename}/index.php",
-                'category' => 'brainwave-component',
-                'icon' => [
-                    'foreground' => '#0074d9',
-                    'src' => 'shortcode'
-                ],
-                'multiple' => true,
-                'example' => [
-                    'attributes' => [
-                        'mode' => 'preview',
-                    ]
-                ]
-            ]);
-        }
+//        foreach (glob(get_template_directory() . "/components/*") as $file) {
+//            $filename = basename($file);
+//            $title = ucfirst(str_replace('-', ' ', $filename));
+//
+//            acf_register_block([
+//                'name' => $filename,
+//                'title' => $title,
+//                'description' => __('A custom ' . $title),
+//                'render_template' => get_template_directory() . "/components/{$filename}/index.php",
+//                'category' => 'brainwave-component',
+//                'icon' => [
+//                    'foreground' => '#0074d9',
+//                    'src' => 'shortcode'
+//                ],
+//                'multiple' => true,
+//                'example' => [
+//                    'attributes' => [
+//                        'mode' => 'preview',
+//                    ]
+//                ]
+//            ]);
+//        }
 
         foreach (glob(get_template_directory() . "/blocks/*", GLOB_ONLYDIR) as $file) {
             $filename = basename($file);
@@ -62,7 +62,7 @@ function my_acf_json_load_points($paths)
 
     return $paths;
 }
-add_filter('acf/settings/load_json', 'my_acf_json_load_points');
+//add_filter('acf/settings/load_json', 'my_acf_json_load_points');
 
 function deleteFolder($folderPath)
 {
@@ -112,4 +112,4 @@ function my_acf_json_save_point()
     }
     return $custom_path;
 }
-add_filter('acf/settings/save_json', 'my_acf_json_save_point');
+//add_filter('acf/settings/save_json', 'my_acf_json_save_point');

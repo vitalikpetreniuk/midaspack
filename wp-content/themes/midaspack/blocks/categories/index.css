@@ -9,6 +9,7 @@
         rounded-[40px]
         overflow-hidden
     }
+
     .mp-categories ul li > div {
         @apply
         absolute
@@ -17,6 +18,7 @@
         left-[24px]
         desktopMin:left-[36px]
     }
+
     .mp-categories ul li img {
         @apply
         block
@@ -24,6 +26,7 @@
         w-full
         object-cover
     }
+
     .mp-categories ul li a {
         @apply
         block

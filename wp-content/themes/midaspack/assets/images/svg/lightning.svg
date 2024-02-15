@@ -1,9 +1,10 @@
 <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="lightning-svgrepo-com 1">
-<g id="Group">
-<g id="c1_ray">
-<path id="Vector" d="M28.6738 0L6.93994 21.6067H15.0013L8.80487 38L31.0582 16.392H22.9956L28.6738 0Z" fill="#1E1E5C"/>
-</g>
-</g>
-</g>
+    <g id="lightning-svgrepo-com 1">
+        <g id="Group">
+            <g id="c1_ray">
+                <path id="Vector" d="M28.6738 0L6.93994 21.6067H15.0013L8.80487 38L31.0582 16.392H22.9956L28.6738 0Z"
+                      fill="#1E1E5C"/>
+            </g>
+        </g>
+    </g>
 </svg>

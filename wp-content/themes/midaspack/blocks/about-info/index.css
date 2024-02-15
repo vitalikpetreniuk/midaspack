@@ -9,6 +9,7 @@
         justify-between
         items-center
     }
+
     .mp-about-info ul {
         @apply
         flex
@@ -16,19 +17,22 @@
         desktopMin:justify-start
         items-start
     }
+
     .mp-about-info ul li {
         @apply
         relative
         w-1/3
     }
+
     .mp-about-info ul li div {
         @apply
         font-proximanova-bold
-        /*font-bold*/
+            /*font-bold*/
         text-[30px]/[2]
         desktopMin:text-[45px]/[2]
         text-accent
     }
+
     .mp-about-info ul li span {
         @apply
         font-proximanova-light

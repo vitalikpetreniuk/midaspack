@@ -3,6 +3,209 @@
 @tailwind components;
 
 @layer components {
+    ul.wpc-filters-ul-list {
+        @apply
+        mb-[45px]
+        desktopMin:mb-[35px]
+        flex
+        flex-wrap
+        justify-start
+        items-center
+        gap-[5px]
+        desktopMin:gap-[10px]
+        font-proximanova-bold
+        text-[16px]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item label {
+        @apply
+        cursor-pointer
+        leading-[1.5]
+        px-[17px]
+        desktopMin:px-[20px]
+        pt-[6px]
+        pb-[5px]
+        rounded-[20px]
+        border
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+1) label {
+        @apply
+        border-[#58AAEB]
+        text-[#58AAEB]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+2) label {
+        @apply
+        border-[#3C5A9A]
+        text-[#3C5A9A]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+3) label {
+        @apply
+        border-[#64A1C1]
+        text-[#64A1C1]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+4) label {
+        @apply
+        border-[#7BB6E0]
+        text-[#7BB6E0]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+5) label {
+        @apply
+        border-grey
+        text-grey
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+6) label {
+        @apply
+        border-accent
+        text-accent
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item.selected label {
+        @apply
+        pl-[36px]
+        text-white
+        bg-[url('../images/svg/check.svg')]
+        bg-no-repeat
+        bg-[11px_center]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+1).selected label {
+        @apply
+        bg-[#58AAEB]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+2).selected label {
+        @apply
+        bg-[#3C5A9A]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+3).selected label {
+        @apply
+        bg-[#64A1C1]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+4).selected label {
+        @apply
+        bg-[#7BB6E0]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+5).selected label {
+        @apply
+        bg-[#868686]
+    }
+
+    ul.wpc-filters-ul-list li.wpc-term-item:nth-child(6n+6).selected label {
+        @apply
+        bg-[#1E1E5C]
+    }
+
+    #book-a-consultation-modal {
+        @apply flex flex-col mt-[25px] gap-y-[10px];
+    }
+
+    .nav-links {
+        @apply pt-[2px] flex justify-start font-proximanova-regular text-[14px] text-black;
+    }
+
+    .nav-links .prev,
+    .nav-links .next {
+        @apply cursor-pointer flex justify-center items-center w-[25px] h-[25px] rounded-[50%] bg-[#E9E9E9] hover:bg-accent transition duration-100;
+    }
+
+    .nav-links .prev span,
+    .nav-links .next span {
+        @apply block w-[10px] h-[10px];
+    }
+
+    .mp-nav .menu-item a {
+        @apply text-content;
+    }
+
+    .wpml-ls-current-language {
+        display: none;
+    }
+
+    .language-toggle__list .uk a, .current_lang.uk {
+        @apply bg-[url('../images/svg/uk.svg')];
+    }
+
+    .language-toggle__list .en a, .current_lang.en {
+        @apply bg-[url('../images/svg/en.svg')];
+    }
+
+    .language-toggle__list .de a, .current_lang.de {
+        @apply bg-[url('../images/svg/de.svg')];
+    }
+
+    .language-toggle__list .pl a, .current_lang.pl {
+        @apply bg-[url('../images/svg/pl.svg')];
+    }
+
+    .subscribe_form_title {
+        @apply block max-w-[310px] desktopMin:max-w-none mx-auto desktopMin:mx-0 text-center desktopMin:text-left font-proximanova-light font-light text-content text-[14px]/[1]
+    }
+
+    .subscribe_form_email {
+        @apply block w-full h-[40px] mt-[20px] desktopMin:mt-[18px] pl-[24px] pr-[24px] bg-[#F1F1F1] rounded-[10px] font-proximanova-light font-light text-[14px]/[1] text-[rgb(15, 15, 15)] placeholder-[rgba(15, 15, 15, .3)] outline-none;
+    }
+
+    .subscribe_form_submit {
+        @apply cursor-pointer mt-[13px] mx-auto desktopMin:mx-0 h-[50px] px-[25px] rounded-[40px] bg-accent hover:bg-accent_hover transition duration-100 font-proximanova-bold text-white text-[15px]/[1] uppercase;
+    }
+
+    .accent-bg {
+        @apply bg-[#1E1E5C];
+    }
+
+    .hover-text-accent {
+        @apply hover:text-[#1E1E5C];
+    }
+
+    .cornflower-bg {
+        @apply bg-cornflower;
+    }
+
+    .hover-text-cornflower {
+        @apply hover:text-cornflower;
+    }
+
+    .celestial-bg {
+        @apply bg-celestial;
+    }
+
+    .hover-text-celestial {
+        @apply hover:text-celestial;
+    }
+
+    .topaz-bg {
+        @apply bg-topaz;
+    }
+
+    .hover-text-topaz {
+        @apply hover:text-topaz;
+    }
+
+    .graphite-bg {
+        @apply bg-graphite;
+    }
+
+    .hover-text-graphite {
+        @apply hover:text-graphite;
+    }
+
+    .accent_hover-bg {
+        @apply bg-accent_hover;
+    }
+
+    .hover-text-accent_hover {
+        @apply hover:text-accent_hover;
+    }
+
     body {
         @apply
         pt-[102px]
@@ -14,6 +217,7 @@
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
     }
+
     .container {
         @apply w-full resp-[w-max/1450] mx-auto resp-[px/15]
     }
@@ -22,23 +226,24 @@
     .title-1 {
         @apply resp-[font/120/45] text-yellow resp-[line-height/101/120] font-ravels-extrabold
     }
+
     .title-2 {
         @apply
         resp-[font/65/25] text-black resp-[line-height/65/45]  font-ravels-medium
     }
 
 
-    .title-2-violet span{
+    .title-2-violet span {
         @apply
         text-violet  font-ravels-black
     }
 
-    .title-2-yellow span{
+    .title-2-yellow span {
         @apply
         text-yellow  font-ravels-black
     }
 
-    .title-2-white span{
+    .title-2-white span {
         @apply
         text-darkWhite  font-ravels-black
     }
@@ -66,7 +271,7 @@
     }
 
     header {
-        @apply  flex-header z-50
+        @apply flex-header z-50
     }
 
     main {
@@ -94,12 +299,13 @@
     h1, .title-h1 {
         @apply
         font-gilroy-bold
-        /*font-bold*/
+            /*font-bold*/
         !text-[25px]/[1.2]
         desktopMin:!text-[30px]/[1.2]
         text-content
     }
-    .title-h1{
+
+    .title-h1 {
         @apply
         mb-[30px]
     }
@@ -107,16 +313,17 @@
     h2 {
         @apply
         font-proximanova-bold
-        /*font-bold*/
+            /*font-bold*/
         !text-[25px]/[1.2]
         text-content
     }
+
     .title-h4 {
         @apply
         mb-[15px]
         desktopMin:mb-[20px]
         font-proximanova-bold
-        /*font-bold*/
+            /*font-bold*/
         text-[20px]/[1.2]
     }
 
@@ -140,16 +347,18 @@
         transition
         duration-100
         font-proximanova-bold
-        /*font-bold*/
+            /*font-bold*/
         text-white
         text-[15px]/[51px]
         uppercase
     }
+
     .mp-button.inversed {
         @apply
         bg-accent_hover
         hover:bg-accent
     }
+
     .mp-button-light {
         @apply
         bg-accent/10
@@ -175,6 +384,7 @@
         text-content
         placeholder:text-date
     }
+
     form textarea {
         @apply
         block
@@ -193,6 +403,7 @@
         text-content
         placeholder:text-date
     }
+
     form input[type="submit"] {
         @apply
         block
@@ -208,30 +419,40 @@
         transition
         duration-100
         font-proximanova-bold
-        /*font-bold*/
+            /*font-bold*/
         text-white
         text-[15px]/[1]
         uppercase
     }
+
     form br, form .wpcf7-spinner {
         @apply
         hidden
     }
+
+    .h-screen-110 {
+        @apply
+        h-[calc(100vh - 110px)]
+    }
+}
+
+.max-h-screen-110 {
+    max-height: calc(100vh - 110px);
 }
 
 header {
     filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.05));
 }
+
 .scrollbar-hide::-webkit-scrollbar {
     width: 0;
 }
 
 .subtitle-1 {
-    text-shadow:
-            -1px -1px 0 #FCFF00,
-            1px -1px 0 #FCFF00,
-            -1px 1px 0 #FCFF00,
-            1px 1px 0 #FCFF00;
+    text-shadow: -1px -1px 0 #FCFF00,
+    1px -1px 0 #FCFF00,
+    -1px 1px 0 #FCFF00,
+    1px 1px 0 #FCFF00;
 }
 
 .swiper-button-prev:after,
@@ -245,6 +466,7 @@ header {
     align-items: center;
     column-gap: 8px;
 }
+
 .swiper-pagination-bullet {
     position: relative;
     margin: 0;
@@ -254,6 +476,7 @@ header {
 
     opacity: .36 !important;
 }
+
 .swiper-pagination-bullet:after {
     content: '';
     display: block;
@@ -268,6 +491,7 @@ header {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
 .swiper-pagination-bullet-active {
     opacity: 1 !important;
 }
