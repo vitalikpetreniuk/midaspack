@@ -55,6 +55,8 @@
     }
     .pm-gallery .go-prev, .pm-gallery .go-next {
         @apply
+        hidden
+        desktopMin:block
         mt-0
         top-0
         translate-y-0
@@ -119,6 +121,12 @@
         text-[20px]/[1.2]
         text-content
     }
+    .pm-info .pm-price span {
+        font-family: 'Montserrat', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
     .pm-info button {
         @apply
         box-border
@@ -141,9 +149,9 @@
 
     .product-characteristics {
         @apply
-        mt-[75px]
+        mt-[35px]
+        desktopMin:mt-[75px]
         mb-[65px]
-        desktopMin:mb-[75px]
         flex
         flex-col
         desktopMin:flex-row
@@ -170,6 +178,36 @@
     .product-characteristics .pc-video > div video {
         @apply
         absolute
+    }
+
+
+    ul.product-sizes {
+        @apply
+        mt-[5px]
+        flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]
+    }
+    ul.product-sizes li {
+        @apply
+        cursor-pointer
+        px-[10px] pt-[4px] pb-[3px]
+        rounded-[40px]
+        border
+        border-[#868686]
+        text-[#868686]
+        font-proximanova-regular font-normal text-[14px]/[1.2]
+
+        hover:bg-accent/[.1]
+        hover:border-transparent
+        transition
+        duration-100
+    }
+    ul.product-sizes .selected {
+        @apply
+        text-accent
+        border-accent
+        bg-size
+        hover:bg-size
+        hover:border-accent
     }
 }
 

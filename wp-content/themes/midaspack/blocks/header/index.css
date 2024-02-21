@@ -8,8 +8,9 @@
         top-0
         left-0
         right-0
-        desktopMin:relative
+        desktopMin:static
     }
+
     .mp-lang ul li:hover a span {
         @apply
         opacity-100
@@ -59,13 +60,18 @@
         rounded-[50%]
         bg-accent/10
         desktopMin:bg-[#E8E8EF]
+        bg-[url('../images/svg/phone.svg')]
         bg-no-repeat
-        bg-right
+        bg-center
         justify-center
         items-center
+
+        transition
+        duration-100
     }
-    .mp-call:hover span span {
+    .mp-call:hover span {
         @apply
+        bg-white
         bg-[url('../images/svg/phone-lb.svg')]
     }
 
@@ -188,6 +194,14 @@
         font-light
         text-[18px]/[1.5]
     }
+    .mp-mobile .mpm-nav li a {
+        @apply
+        text-content/[50%]
+    }
+    .mp-mobile .mpm-nav li.current-menu-item a {
+        @apply
+        text-content
+    }
 
     .mp-mobile .mpm-lang {
         @apply
@@ -225,7 +239,6 @@
         pr-[6px]
         rounded-[40px]
         bg-accent
-        hover:bg-accent_hover
         transition
         duration-100
         font-proximanova-bold
@@ -240,9 +253,23 @@
         w-[40px]
         h-[40px]
         rounded-[50%]
-        bg-[#E8E8EF]
+        bg-accent
+        bg-[url('../images/svg/phone.svg')]
         bg-no-repeat
         bg-right
+        justify-center
+        items-center
+    }
+    .mp-mobile .mpm-call > span {
+        @apply
+        flex
+        w-[40px]
+        h-[40px]
+        rounded-[50%]
+        bg-[#E8E8EF]
+        bg-[url('../images/svg/phone.svg')]
+        bg-no-repeat
+        bg-center
         justify-center
         items-center
     }
@@ -338,4 +365,23 @@ body.call-onscreen .blured {
     display: block;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
+}
+
+
+body.fixed-header {
+    padding-top: 105px;
+}
+header.fixed-white {
+    position: relative;
+    filter: none !important;
+}
+header .bg-white {
+    filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.05));
+}
+header.fixed-white .bg-white {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 14;
 }

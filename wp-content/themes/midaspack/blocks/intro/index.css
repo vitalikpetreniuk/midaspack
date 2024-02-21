@@ -4,6 +4,9 @@
     .mp-intro .swiper-slide {
         @apply
         relative
+        h-[calc(100vh-102px)]
+        desktopMax:h-[calc(100vh-110px)]
+        desktopMax:max-h-[685px]
 
         after:content-['']
         after:block
@@ -26,11 +29,4 @@
         @apply
         !bg-white/100
     }
-}
-
-.h-screen-102 {
-    height: calc(100vh - 102px);
-}
-.max-h-screen-102 {
-    max-height: calc(100vh - 102px);
 }

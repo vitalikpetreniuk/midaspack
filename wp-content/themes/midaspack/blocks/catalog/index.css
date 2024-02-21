@@ -60,40 +60,48 @@
         @apply
         pl-[36px]
         text-white
-        bg-[url('../images/svg/check.svg')]
-        bg-no-repeat
-        bg-[11px_center]
     }
     ul.sort li:nth-child(6n+1).selected {
         @apply
         bg-[#58AAEB]
+        bg-[url('../images/svg/check1.svg')]
+        bg-no-repeat
+        bg-[11px_center]
     }
     ul.sort li:nth-child(6n+2).selected {
         @apply
         bg-[#3C5A9A]
+        bg-[url('../images/svg/check2.svg')]
+        bg-no-repeat
+        bg-[11px_center]
     }
     ul.sort li:nth-child(6n+3).selected {
         @apply
         bg-[#64A1C1]
+        bg-[url('../images/svg/check3.svg')]
+        bg-no-repeat
+        bg-[11px_center]
     }
     ul.sort li:nth-child(6n+4).selected {
         @apply
         bg-[#7BB6E0]
+        bg-[url('../images/svg/check4.svg')]
+        bg-no-repeat
+        bg-[11px_center]
     }
     ul.sort li:nth-child(6n+5).selected {
         @apply
         bg-[#868686]
+        bg-[url('../images/svg/check5.svg')]
+        bg-no-repeat
+        bg-[11px_center]
     }
     ul.sort li:nth-child(6n+6).selected {
         @apply
         bg-[#1E1E5C]
-    }
-
-    ul.product-sizes .selected {
-        @apply
-        text-accent
-        border-accent
-        bg-size
+        bg-[url('../images/svg/check6.svg')]
+        bg-no-repeat
+        bg-[11px_center]
     }
 
     .products {
@@ -135,6 +143,15 @@
         text-content
         text-[16px]/[1.2]
     }
+    .products .product .product-title a {
+        @apply
+        transition
+        duration-100
+    }
+    .products .product .product-title a:hover {
+        @apply
+        text-accent_hover
+    }
     .products .product.has-price .product-title {
         @apply
         h-[39px]
@@ -159,6 +176,12 @@
         font-proximanova-bold
         text-content
         text-[20px]/[1.2]
+    }
+    .products .product .btm-info .product-price span {
+        font-family: 'Montserrat', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
     }
     .products .product.has-price .btm-info .product-price {
         @apply

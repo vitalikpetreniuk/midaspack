@@ -1,23 +1,24 @@
 import "./utils/swiper";
 
-let body = document.querySelector('body');
+let body = document.body;
 let blured = document.querySelector('.blured');
 
 let callPopupButton = document.querySelector('.mp-call');
+let mobileCall = document.querySelector('.mpm-call');
 let callPopupButtonApproach = document.querySelector('.mp-approach .mp-button');
 let closePopupButton = document.querySelector('.mp-close');
 let mpKyivstar = document.querySelector('.mp-kyivstar');
 let burger = document.querySelector('button.mobile-menu');
 
 // JavaScript
-var mpLang = document.querySelector('.mp-lang');
-var ulElement = document.querySelector('.mp-lang ul');
-var liElements = ulElement.getElementsByTagName('li');
-var totalWidth = 0;
-var currentWidth = 0;
+let mpLang = document.querySelector('.mp-lang');
+let ulElement = document.querySelector('.mp-lang ul');
+let liElements = ulElement.getElementsByTagName('li');
+let totalWidth = 0;
+let currentWidth = 0;
 
-for (var i = 0; i < liElements.length; i++) {
-    var elementWidth = liElements[i].offsetWidth;
+for (let i = 0; i < liElements.length; i++) {
+    let elementWidth = liElements[i].offsetWidth;
     totalWidth += elementWidth;
 }
 totalWidth = totalWidth + 60;
@@ -30,7 +31,7 @@ document.querySelector('.mp-lang > span').addEventListener('click', function() {
     }
 });
 document.addEventListener('click', function(event) {
-    var targetElement = event.target;
+    let targetElement = event.target;
     if (!mpLang.contains(targetElement)) {
         if (currentWidth !== 0) {
             animateToZero();
@@ -53,13 +54,23 @@ blured.addEventListener('click', function() {
     mpKyivstar.classList.remove('opened');
 });
 
-callPopupButton.addEventListener('click', function(event) {
-    body.classList.add('call-onscreen');
-});
-closePopupButton.addEventListener('click', function(event) {
-    console.log('clicked');
-    body.classList.remove('call-onscreen');
-});
+if(callPopupButton) {
+    callPopupButton.addEventListener('click', function(event) {
+        body.classList.add('call-onscreen');
+    });
+}
+if(closePopupButton) {
+    closePopupButton.addEventListener('click', function(event) {
+        console.log('clicked');
+        body.classList.remove('call-onscreen');
+    });
+}
+if(mobileCall) {
+    mobileCall.addEventListener('click', function(event) {
+        body.classList.remove('mm-open');
+        body.classList.add('call-onscreen');
+    });
+}
 
 if (callPopupButtonApproach) {
     callPopupButtonApproach.addEventListener('click', function(event) {
@@ -97,6 +108,24 @@ if (document.querySelector('ul.sort')) {
         });
     });
 }
+if (document.querySelector('.mp-categories ul')) {
+    addRemoveClassOnHover();
+}
+
+window.addEventListener('scroll', function() {
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+
+    if (window.innerWidth >1099) {
+        if (scrollPosition > 31) {
+            body.classList.add('fixed-header');
+            document.querySelector('header').classList.add('fixed-white');
+        } else {
+            body.classList.remove('fixed-header');
+            document.querySelector('header').classList.remove('fixed-white');
+        }
+    }
+});
+
 
 function animateToZero() {
     currentWidth -= 10; // Adjust the speed of animation here
@@ -128,4 +157,20 @@ function toggleHeight() {
         outerDiv.classList.remove('no-fade');
         toggleButton.textContent = 'Більше';
     }
+}
+function addRemoveClassOnHover() {
+    const listItems = document.querySelectorAll('.mp-categories li');
+
+    listItems.forEach(li => {
+        // Add event listener to the tag within each list item
+        li.querySelector('a').addEventListener('mouseenter', () => {
+            // Add 'hovered' class to the parent list item
+            li.classList.add('hovered');
+        });
+
+        li.querySelector('a').addEventListener('mouseleave', () => {
+            // Remove 'hovered' class from the parent list item
+            li.classList.remove('hovered');
+        });
+    });
 }

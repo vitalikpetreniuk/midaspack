@@ -1,4 +1,5 @@
 import Swiper from '../../../../../../plugins/brainwave/assembly/node_modules/swiper';
+import Autoplay from '../../../../../../plugins/brainwave/assembly/node_modules/swiper/modules/autoplay.min.mjs';
 import Navigation from '../../../../../../plugins/brainwave/assembly/node_modules/swiper/modules/navigation.min.mjs';
 import Pagination from '../../../../../../plugins/brainwave/assembly/node_modules/swiper/modules/pagination.min.mjs';
 
@@ -6,11 +7,17 @@ document.addEventListener('DOMContentLoaded', function(){
     const introSlider = document.querySelectorAll('.mp-intro .swiper');
     const productsSlider = document.querySelectorAll('.mp-products .swiper');
     const newsSlider = document.querySelectorAll('.mp-news .swiper');
+    const newsRecSlider = document.querySelectorAll('.mp-news-recommend .swiper');
     const productImages = document.querySelectorAll('.mp-product .swiper');
     if (introSlider.length > 0) {
         const swiper = new Swiper('.mp-intro .swiper', {
-            modules: [Pagination],
+            modules: [Autoplay, Pagination],
+            centeredSlides: true,
             loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true
@@ -74,6 +81,37 @@ document.addEventListener('DOMContentLoaded', function(){
         });
         document.querySelector('.mp-news .go-next').addEventListener('click', function () {
             document.querySelector('.mp-news .swiper-button-next').click();
+        });
+    }
+    if (newsRecSlider.length > 0) {
+        const swiper = new Swiper('.mp-news-recommend .swiper', {
+            modules: [Navigation, Pagination],
+            loop: true,
+            slidesPerView: 1,
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1100: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+        document.querySelector('.mp-news-recommend .go-prev').addEventListener('click', function () {
+            document.querySelector('.mp-news-recommend .swiper-button-prev').click();
+        });
+        document.querySelector('.mp-news-recommend .go-next').addEventListener('click', function () {
+            document.querySelector('.mp-news-recommend .swiper-button-next').click();
         });
     }
     if (productImages.length > 0) {

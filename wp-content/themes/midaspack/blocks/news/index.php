@@ -8,75 +8,51 @@
             <div class="swiper pb-[40px]">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                <path d="M1.5 1.5H18.5M18.5 1.5V18.5M18.5 1.5L1.5 18.5" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </a>
+                        <a href="#"><?php renderAssetsSVG('svg/link') ?></a>
                         <span class="news-date">12.03.2023</span>
-                        <div class="news-text">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</div>
+                        <div class="news-text"><a href="#">On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue</a></div>
                         <div class="news-image">
-                            <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                            <a href="#"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news1.jpg') ?>" alt=""></a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                <path d="M1.5 1.5H18.5M18.5 1.5V18.5M18.5 1.5L1.5 18.5" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </a>
+                        <a href="#"><?php renderAssetsSVG('svg/link') ?></a>
                         <span class="news-date">12.03.2023</span>
-                        <div class="news-text">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</div>
+                        <div class="news-text"><a href="#">Про партнерство з MIDAS PACK буде писати тут</a></div>
                         <div class="news-image">
-                            <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                            <a href="#"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news2.jpg') ?>" alt=""></a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                <path d="M1.5 1.5H18.5M18.5 1.5V18.5M18.5 1.5L1.5 18.5" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </a>
+                        <a href="#"><?php renderAssetsSVG('svg/link') ?></a>
                         <span class="news-date">12.03.2023</span>
-                        <div class="news-text">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</div>
+                        <div class="news-text"><a href="#">Про партнерство з MIDAS PACK буде писати тут, треба просто</a></div>
                         <div class="news-image">
-                            <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                            <a href="#"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news3.jpg') ?>" alt=""></a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                <path d="M1.5 1.5H18.5M18.5 1.5V18.5M18.5 1.5L1.5 18.5" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </a>
+                        <a href="#"><?php renderAssetsSVG('svg/link') ?></a>
                         <span class="news-date">12.03.2023</span>
-                        <div class="news-text">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</div>
+                        <div class="news-text"><a href="#">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</a></div>
                         <div class="news-image">
-                            <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                            <a href="#"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news1.jpg') ?>" alt=""></a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                <path d="M1.5 1.5H18.5M18.5 1.5V18.5M18.5 1.5L1.5 18.5" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </a>
+                        <a href="#"><?php renderAssetsSVG('svg/link') ?></a>
                         <span class="news-date">12.03.2023</span>
-                        <div class="news-text">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</div>
+                        <div class="news-text"><a href="#">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</a></div>
                         <div class="news-image">
-                            <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                            <a href="#"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news2.jpg') ?>" alt=""></a>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
-                                <path d="M1.5 1.5H18.5M18.5 1.5V18.5M18.5 1.5L1.5 18.5" stroke="white" stroke-width="2"/>
-                            </svg>
-                        </a>
+                        <a href="#"><?php renderAssetsSVG('svg/link') ?></a>
                         <span class="news-date">12.03.2023</span>
-                        <div class="news-text">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</div>
+                        <div class="news-text"><a href="#">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує на</a></div>
                         <div class="news-image">
-                            <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                            <a href="#"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news3.jpg') ?>" alt=""></a>
                         </div>
                     </div>
                 </div>

@@ -11,91 +11,159 @@
         </ul>
 
         <div class="products">
-            <div class="product">
+            <div class="swiper-slide product">
                 <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product1.png') ?>" alt="big bag">
+                    </a>
                 </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий</div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
                 <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                 <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
+                    <div class="product-price">310 - 540 <span>₴</span></div>
                     <a href="/product">Уточнити ціну</a>
                 </div>
             </div>
-            <div class="product">
+            <div class="swiper-slide has-price product">
                 <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product2.png') ?>" alt="big bag">
+                    </a>
                 </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий, дно глухе</div>
-                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. dummy text of the printing and typesetting industry.</div>
-                <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
-                    <a href="/product">Уточнити ціну</a>
-                </div>
-            </div>
-            <div class="product">
-                <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
-                </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий</div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
                 <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                 <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
-                    <a href="/product">Уточнити ціну</a>
-                </div>
-            </div>
-            <div class="product">
-                <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
-                </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий, дно глухе</div>
-                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. dummy text of the printing and typesetting industry.</div>
-                <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
-                    <a href="/product">Уточнити ціну</a>
-                </div>
-            </div>
-            <div class="product has-price">
-                <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
-                </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий</div>
-                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
-                <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
+                    <div class="product-price">310 - 540 <span>₴</span></div>
                     <a href="/product">Переглянути</a>
                 </div>
             </div>
-            <div class="product has-price">
+            <div class="swiper-slide product">
                 <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product3.png') ?>" alt="big bag">
+                    </a>
                 </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий</div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
                 <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                 <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
+                    <div class="product-price">310 - 540 <span>₴</span></div>
+                    <a href="/product">Уточнити ціну</a>
+                </div>
+            </div>
+            <div class="swiper-slide has-price product">
+                <div class="product-image">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product2.png') ?>" alt="big bag">
+                    </a>
+                </div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
+                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                <div class="btm-info absolute bottom-0 left-0 right-0">
+                    <div class="product-price">310 - 540 <span>₴</span></div>
                     <a href="/product">Переглянути</a>
                 </div>
             </div>
-            <div class="product has-price">
+            <div class="swiper-slide product">
                 <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product3.png') ?>" alt="big bag">
+                    </a>
                 </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий</div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
                 <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                 <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
+                    <div class="product-price">310 - 540 <span>₴</span></div>
+                    <a href="/product">Уточнити ціну</a>
+                </div>
+            </div>
+            <div class="swiper-slide has-price product">
+                <div class="product-image">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product2.png') ?>" alt="big bag">
+                    </a>
+                </div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
+                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                <div class="btm-info absolute bottom-0 left-0 right-0">
+                    <div class="product-price">310 - 540 <span>₴</span></div>
                     <a href="/product">Переглянути</a>
                 </div>
             </div>
-            <div class="product has-price">
+            <div class="swiper-slide product">
                 <div class="product-image">
-                    <img class="block w-full h-full object-cover" src="<?php bloginfo('template_url'); ?>/assets/images/product.png" alt="">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product3.png') ?>" alt="big bag">
+                    </a>
                 </div>
-                <div class="product-title">Чотири стропи дно глухе, верх відкритий</div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
                 <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
                 <div class="btm-info absolute bottom-0 left-0 right-0">
-                    <div class="product-price">310 - 540 ₴</div>
+                    <div class="product-price">310 - 540 <span>₴</span></div>
+                    <a href="/product">Уточнити ціну</a>
+                </div>
+            </div>
+            <div class="swiper-slide has-price product">
+                <div class="product-image">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product2.png') ?>" alt="big bag">
+                    </a>
+                </div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
+                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                <div class="btm-info absolute bottom-0 left-0 right-0">
+                    <div class="product-price">310 - 540 <span>₴</span></div>
+                    <a href="/product">Переглянути</a>
+                </div>
+            </div>
+            <div class="swiper-slide product">
+                <div class="product-image">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product3.png') ?>" alt="big bag">
+                    </a>
+                </div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
+                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                <div class="btm-info absolute bottom-0 left-0 right-0">
+                    <div class="product-price">310 - 540 <span>₴</span></div>
+                    <a href="/product">Уточнити ціну</a>
+                </div>
+            </div>
+            <div class="swiper-slide has-price product">
+                <div class="product-image">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product2.png') ?>" alt="big bag">
+                    </a>
+                </div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
+                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                <div class="btm-info absolute bottom-0 left-0 right-0">
+                    <div class="product-price">310 - 540 <span>₴</span></div>
+                    <a href="/product">Переглянути</a>
+                </div>
+            </div>
+            <div class="swiper-slide product">
+                <div class="product-image">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product3.png') ?>" alt="big bag">
+                    </a>
+                </div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
+                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                <div class="btm-info absolute bottom-0 left-0 right-0">
+                    <div class="product-price">310 - 540 <span>₴</span></div>
+                    <a href="/product">Уточнити ціну</a>
+                </div>
+            </div>
+            <div class="swiper-slide has-price product">
+                <div class="product-image">
+                    <a href="/product">
+                        <img class="block w-full h-full object-cover" src="<?php renderImages('temp/product2.png') ?>" alt="big bag">
+                    </a>
+                </div>
+                <div class="product-title"><a href="/product">Чотири стропи дно глухе, верх відкритий, низ закритий</a></div>
+                <div class="product-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+                <div class="btm-info absolute bottom-0 left-0 right-0">
+                    <div class="product-price">310 - 540 <span>₴</span></div>
                     <a href="/product">Переглянути</a>
                 </div>
             </div>

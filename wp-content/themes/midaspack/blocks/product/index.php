@@ -39,25 +39,25 @@
                 <div class="pm-options">
                     <div>
                         <span class="font-proximanova-regular font-regular text-grey text-[16px] leading-[2] uppercase">Розмір</span>
-                        <ul class="product-sizes mt-[5px] flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]">
-                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686] selected">90х90х70</li>
-                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686]">90х90х180</li>
-                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686]">90х90х210</li>
+                        <ul class="product-sizes">
+                            <li class="selected">90х90х70</li>
+                            <li>90х90х180</li>
+                            <li>90х90х210</li>
                         </ul>
                     </div>
                     <div>
                         <span class="font-proximanova-regular font-regular text-grey text-[16px] leading-[2] uppercase">Щільність</span>
-                        <ul class="product-sizes mt-[5px] flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]">
-                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686] selected">15мкм</li>
-                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686]">40мкм</li>
-                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686]">100мкм</li>
+                        <ul class="product-sizes">
+                            <li class="selected">15мкм</li>
+                            <li>40мкм</li>
+                            <li>100мкм</li>
                         </ul>
                     </div>
                 </div>
                 <div class="pm-description">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>
                 </div>
-                <div class="pm-price">310 - 510 ₴</div>
+                <div class="pm-price">310 - 510 <span>₴</span></div>
                 <button>Замовити</button>
             </div>
         </div>

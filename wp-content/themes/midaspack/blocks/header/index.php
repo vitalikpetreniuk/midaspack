@@ -72,7 +72,7 @@
                         <li><a href="/about-us" class="text-content">Про нас</a></li>
                     </ul>
                 </div>
-                <button class="mp-call">Замовити консультацію <span><span class="block w-[22px] h-[22px] bg-[url('../images/svg/phone.svg')] transition duration-100 ease"></span></span></button>
+                <button class="mp-call">Замовити консультацію <span></span></button>
             </div>
         </div>
     </div>
@@ -80,7 +80,7 @@
     <div class="mp-mobile hidden">
         <div>
             <ul class="mpm-nav">
-                <li class="selected"><a href="#" class="text-content">Головна</a></li>
+                <li class="current-menu-item"><a href="#" class="text-content">Головна</a></li>
                 <li><a href="/catalog" class="text-content">Товари</a></li>
                 <li><a href="/news" class="text-content">Новини</a></li>
                 <li><a href="#" class="text-content">Блог</a></li>
@@ -98,7 +98,7 @@
                 <li class="telegram"><a href="#" class="block text-0 text-transparent w-[24px] h-[24px] bg-[url('../images/svg/telegram.svg')] bg-no-repeat hover:bg-[url('../images/svg/telegram-hover.svg')]">tlgrm</a></li>
                 <li class="instagram"><a href="#" class="block text-0 text-transparent w-[24px] h-[24px] bg-[url('../images/svg/instagram.svg')] bg-no-repeat hover:bg-[url('../images/svg/instagram-hover.svg')]">inst</a></li>
             </ul>
-            <button class="mpm-call">Замовити консультацію <span><span class="block w-[22px] h-[22px] bg-[url('../images/svg/phone.svg')] transition duration-100 ease"></span></span></button>
+            <button class="mpm-call">Замовити консультацію <span></span></button>
         </div>
     </div>
 </header>
