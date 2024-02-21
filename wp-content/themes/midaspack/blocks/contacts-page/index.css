@@ -8,18 +8,11 @@
         desktopMin:flex-row
         gap-[10px]
     }
-
     .contact-form form p:first-of-type span {
         @apply
         block
         w-full
         desktopMin:w-half-gap-mini
-    }
-
-    .contact-form form p:last-of-type span {
-        @apply
-        block
-        w-full
     }
 
     .contact-form form p:first-of-type span input,
@@ -37,11 +30,16 @@
         bg-[left_11px_center]
     }
 
-    .contact-form form p:last-of-type {
+    /*.contact-form form p:last-of-type {*/
+    /*    @apply*/
+    /*    flex*/
+    /*    flex-col*/
+    /*    items-center*/
+    /*    desktopMin:items-start*/
+    /*}*/
+    .contact-form form p:last-of-type span {
         @apply
-        flex
-        flex-col
-        items-center
-        desktopMin:items-start
+        block
+        w-full
     }
 }

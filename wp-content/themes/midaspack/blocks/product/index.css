@@ -56,7 +56,7 @@
     .pm-gallery .go-prev, .pm-gallery .go-next {
         @apply
         hidden
-        desktopMin:block
+        desktopMin:flex
         mt-0
         top-0
         translate-y-0

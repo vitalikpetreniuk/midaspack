@@ -71,6 +71,7 @@
     }
     .mp-call:hover span {
         @apply
+        !static
         bg-white
         bg-[url('../images/svg/phone-lb.svg')]
     }
@@ -277,7 +278,7 @@
     .mp-popup {
         @apply
         fixed
-        z-[13]
+        z-[101]
         left-0
         right-0
         bottom-0
@@ -326,13 +327,20 @@
         box-border
         text-content
     }
-    .mp-popup .cont .popup-form input[type="tel"] {
+    .mp-popup .cont .popup-form form {
         @apply
-        pl-[30px]
-        bg-[url('../images/svg/ua.svg')]
-        bg-no-repeat
-        bg-[left_11px_center]
+        flex
+        flex-col
+        gap-y-[10px]
+        mt-[25px]
     }
+    /*.mp-popup .cont .popup-form input[type="tel"] {*/
+    /*    @apply*/
+    /*    pl-[30px]*/
+    /*    bg-[url('../images/svg/ua.svg')]*/
+    /*    bg-no-repeat*/
+    /*    bg-[left_11px_center]*/
+    /*}*/
     .mp-popup .cont .popup-img {
         @apply
         block
@@ -349,6 +357,27 @@
         absolute
         bottom-0
         right-0
+    }
+
+    .language-toggle__list .wpml-ls-current-language {
+        @apply
+        !hidden
+    }
+
+    .language-toggle__list .uk a, .current_lang.uk {
+        @apply bg-[url('../images/svg/uk.svg')];
+    }
+
+    .language-toggle__list .en a, .current_lang.en {
+        @apply bg-[url('../images/svg/en.svg')];
+    }
+
+    .language-toggle__list .de a, .current_lang.de {
+        @apply bg-[url('../images/svg/de.svg')];
+    }
+
+    .language-toggle__list .pl a, .current_lang.pl {
+        @apply bg-[url('../images/svg/pl.svg')];
     }
 }
 

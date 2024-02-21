@@ -4,7 +4,6 @@
     .with-shadow {
         text-shadow: 0 0 6px rgba(0, 0, 0, .15);
     }
-
     .mp-approach ul li {
         @apply
         box-border

@@ -3,6 +3,7 @@ import "./utils/swiper";
 let body = document.body;
 let blured = document.querySelector('.blured');
 
+let pulsating = document.querySelector('.pulsating');
 let callPopupButton = document.querySelector('.mp-call');
 let mobileCall = document.querySelector('.mpm-call');
 let callPopupButtonApproach = document.querySelector('.mp-approach .mp-button');
@@ -54,6 +55,12 @@ blured.addEventListener('click', function() {
     mpKyivstar.classList.remove('opened');
 });
 
+if(pulsating) {
+    pulsating.addEventListener('click', function(event) {
+        console.log('pulsating');
+        body.classList.add('call-onscreen');
+    });
+}
 if(callPopupButton) {
     callPopupButton.addEventListener('click', function(event) {
         body.classList.add('call-onscreen');
@@ -111,7 +118,6 @@ if (document.querySelector('ul.sort')) {
 if (document.querySelector('.mp-categories ul')) {
     addRemoveClassOnHover();
 }
-
 window.addEventListener('scroll', function() {
     let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
