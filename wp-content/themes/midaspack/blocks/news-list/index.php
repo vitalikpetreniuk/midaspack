@@ -1,68 +1,24 @@
 <section class="mp-news">
     <div class="cont">
-        <h2 class="mb-[25px]">Новини</h2>
+        <h2 class="mb-[25px]"><?php esc_html_e('News', 'midas'); ?></h2>
         <div class="news">
-            <div class="nl-item">
-                <a href="/news-item"><?php renderAssetsSVG('svg/link') ?></a>
-                <span class="nl-date">12.03.2023</span>
-                <div class="nl-title"><a href="/news-item">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує треба просто клікнути на блок і вас переадресує</a></div>
-                <div class="nl-image">
-                    <a href="/news-item"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news1.jpg') ?>" alt=""></a>
-                </div>
-            </div>
-            <div class="nl-item">
-                <a href="/news-item"><?php renderAssetsSVG('svg/link') ?></a>
-                <span class="nl-date">12.03.2023</span>
-                <div class="nl-title"><a href="/news-item">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує</a></div>
-                <div class="nl-image">
-                    <a href="/news-item"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news2.jpg') ?>" alt=""></a>
-                </div>
-            </div>
-            <div class="nl-item">
-                <a href="/news-item"><?php renderAssetsSVG('svg/link') ?></a>
-                <span class="nl-date">12.03.2023</span>
-                <div class="nl-title"><a href="/news-item">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує</a></div>
-                <div class="nl-image">
-                    <a href="/news-item"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news3.jpg') ?>" alt=""></a>
-                </div>
-            </div>
-            <div class="nl-item">
-                <a href="/news-item"><?php renderAssetsSVG('svg/link') ?></a>
-                <span class="nl-date">12.03.2023</span>
-                <div class="nl-title"><a href="/news-item">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує</a></div>
-                <div class="nl-image">
-                    <a href="/news-item"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news2.jpg') ?>" alt=""></a>
-                </div>
-            </div>
-            <div class="nl-item">
-                <a href="/news-item"><?php renderAssetsSVG('svg/link') ?></a>
-                <span class="nl-date">12.03.2023</span>
-                <div class="nl-title"><a href="/news-item">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує</a></div>
-                <div class="nl-image">
-                    <a href="/news-item"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news3.jpg') ?>" alt=""></a>
-                </div>
-            </div>
-            <div class="nl-item">
-                <a href="/news-item"><?php renderAssetsSVG('svg/link') ?></a>
-                <span class="nl-date">12.03.2023</span>
-                <div class="nl-title"><a href="/news-item">Про партнерство з MIDAS PACK буде писати тут, треба просто клікнути на блок і вас переадресує</a></div>
-                <div class="nl-image">
-                    <a href="/news-item"><img class="block w-full h-full object-cover" src="<?php renderImages('temp/news1.jpg') ?>" alt=""></a>
-                </div>
-            </div>
+            <?php if (have_posts()) {
+                while (have_posts()) {
+                    the_post();
+                    renderComponent('news-item');
+                }
+            } ?>
         </div>
 
-        <nav class="pagination">
-            <span><a class="prev" href="#"><?php renderAssetsSVG('svg/prev') ?></a></span>
-            <ul>
-                <li><a class="page-numbers" href="#">1</a></li>
-                <li><span aria-current="page" class="page-numbers current">2</span></li>
-                <li><a class="page-numbers" href="#">3</a></li>
-                <li><a class="page-numbers" href="#">4</a></li>
-                <li><span class="page-numbers dots">…</span></li>
-                <li><a class="page-numbers" href="#">10</a></li>
-            </ul>
-            <span><a class="next" href="#"><?php renderAssetsSVG('svg/next') ?></a></span>
-        </nav>
+        <?php the_posts_pagination(array(
+            'prev_text'          => '<span><svg xmlns="http://www.w3.org/2000/svg" width="11"
+                                                                           height="11" viewBox="0 0 11 11" fill="none"><path
+                                d="M7.5 10.4497L2.55025 5.49996L7.5 0.550212" stroke="#1E1E5C" stroke-linecap="round"
+                                stroke-linejoin="round"/></svg></span>',
+            'next_text'          => '<span><svg xmlns="http://www.w3.org/2000/svg" width="11"
+                                                                           height="11" viewBox="0 0 11 11" fill="none"><path
+                                d="M3.5 0.550293L8.44975 5.50004L3.5 10.4498" stroke="#1E1E5C" stroke-linecap="round"
+                                stroke-linejoin="round"/></svg></span>',
+        )); ?>
     </div>
 </section>

@@ -20,9 +20,9 @@ function renderBlock($name)
     get_template_part('/blocks/' . $name . '/index');
 }
 
-function renderComponent($name)
+function renderComponent($name, $args = [])
 {
-    get_template_part('/components/' . $name . '/index');
+    locate_template('components/' . $name . '/index.php', true, false, $args);
 }
 
 function renderImages($filename)

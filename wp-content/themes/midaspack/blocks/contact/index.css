@@ -28,6 +28,7 @@
         before:bg-contain
         before:bg-bottom
     }
+
     .mp-contact h2 {
         @apply
         !text-[30px]/[1.2]
@@ -38,7 +39,8 @@
         bg-no-repeat
         bg-left
     }
-    .mp-contact h2+span {
+
+    .mp-contact h2 + span {
         @apply
         inline-block
         max-w-[250px]
@@ -51,6 +53,7 @@
         text-[14px]/[1.5]
         text-content
     }
+
     .mp-contact ul {
         @apply
         mt-[10px]
@@ -62,6 +65,7 @@
         items-start
         gap-y-[10px]
     }
+
     .mp-contact ul li {
         @apply
         h-[36px]
@@ -72,6 +76,7 @@
         text-[16px]/[38px]
         text-white
     }
+
     .mp-contact ul li a {
         @apply
         block

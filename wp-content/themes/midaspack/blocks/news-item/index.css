@@ -5,6 +5,7 @@
         @apply
         mb-[25px]
     }
+
     .mp-news-item p {
         @apply
         block
@@ -16,6 +17,7 @@
         !mt-[20px]
         !mb-[20px]
     }
+
     .mp-news-item h2 + p {
         @apply
         !mt-[10px]
@@ -33,6 +35,7 @@
         bg-left
 
     }
+
     .mp-news-item .date {
         @apply
         block

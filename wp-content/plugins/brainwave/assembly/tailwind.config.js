@@ -8,6 +8,9 @@ module.exports = {
     corePlugins: {
         container: false
     },
+    safelist : [
+        '.wpc-filters-ul-list'
+    ],
     content: [`../../../themes/${cfg.themeName}/**/*.php`], important: false, theme: {
          extend: {
             height: {
@@ -37,6 +40,10 @@ module.exports = {
                  accent_hover: '#58AAEB',
                  grey: '#868686',
                  content: '#0F0F0F',
+                 cornflower: '#3B64A4',
+                 celestial: '#B2D6E9',
+                 topaz: '#7BB6E0',
+                 graphite: '#7C858D',
                  intro_after: 'rgba(18, 18, 70, .42)',
                  'arrow-hover': 'rgba(88, 170, 235, 0.10)',
                  date: 'rgba(15, 15, 15, 0.50)',
@@ -62,6 +69,8 @@ module.exports = {
             },
         }
     }, plugins: [
+        require('postcss-import'),
+        require('@tailwindcss/nesting')(require('postcss-nesting')),
         require('tailwindcss'),
         require('autoprefixer'),
         require('cssnano')({

@@ -5,10 +5,12 @@
         @apply
         w-full
     }
+
     .products .swiper .swiper-wrapper {
         @apply
         h-auto
     }
+
     .products .go-prev, .products .go-next {
         @apply
         absolute
@@ -32,11 +34,13 @@
         transition
         duration-100
     }
+
     .products .go-prev {
         @apply
         left-0
         desktopMin:left-[-45px]
     }
+
     .products .go-next {
         @apply
         right-0

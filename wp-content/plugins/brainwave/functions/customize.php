@@ -6,6 +6,11 @@ function mythem_enqueue_style()
 
     wp_enqueue_style('style', get_template_directory_uri() . '/assets/css/bw-style.css', null, $cache);
     wp_enqueue_script('scripts', get_template_directory_uri() . '/assets/js/bw-script.js', array('jquery'), $cache, true);
+
+    wp_localize_script('scripts', 'backendvars', [
+        'text_more' => __('More', 'midas'),
+        'text_less' => __('Less', 'midas'),
+    ]);
 }
 
 add_action('wp_enqueue_scripts', 'mythem_enqueue_style');
@@ -51,10 +56,11 @@ function customizeTheme()
     ]);
 
     // Register menu(s)
-     register_nav_menus([
-     'header_menu' => 'Header menu',
-     'footer_menu' => 'Footer menu',
-     ]);
+    register_nav_menus([
+        'header_menu' => 'Header menu',
+        'footer_menu1' => 'Footer menu1',
+        'footer_menu2' => 'Footer menu2',
+    ]);
 
 }
 
@@ -76,20 +82,11 @@ function customizeTheme()
 //}
 
 // Remove category & tag text before title
- add_filter('get_the_archive_title', function ($title) {
-   return preg_replace('~^[^:]+: ~', '', $title);
- });
+add_filter('get_the_archive_title', function ($title) {
+    return preg_replace('~^[^:]+: ~', '', $title);
+});
 
 // Add contact info to admin
-//if (function_exists('acf_add_options_page')) {
-//    acf_add_options_page(array(
-//        'page_title' => 'BrainWave',
-//        'menu_title' => 'BrainWave',
-//        'menu_slug'  => 'brainwave-custom',
-//        'post_id'    => 'brainwave-custom',
-//        'icon_url'   => 'dashicons-shortcode',
-//        'position'   => 3,
-//        'redirect'   => true,
-//        'autoload'   => true
-//    ));
-//}
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page();
+}

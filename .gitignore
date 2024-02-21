@@ -1,1 +1,10 @@
+node_modules/
+.idea/
+.DS_Store
+_src/.DS_Store
+/wp-content/uploads/cache/*
+/wp-content/cache/*
+wp-content/uploads/wc-logs/*
+/wp-content/debug.log
+wp-content/themes/.htaccess
 wp-config.php

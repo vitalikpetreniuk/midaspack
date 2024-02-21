@@ -7,6 +7,7 @@
         !mb-[-65px]
         desktopMin:!mb-[-80px]
     }
+
     .mp-map iframe {
         @apply
         block

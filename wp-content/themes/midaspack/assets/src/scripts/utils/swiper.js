@@ -3,7 +3,7 @@ import Autoplay from '../../../../../../plugins/brainwave/assembly/node_modules/
 import Navigation from '../../../../../../plugins/brainwave/assembly/node_modules/swiper/modules/navigation.min.mjs';
 import Pagination from '../../../../../../plugins/brainwave/assembly/node_modules/swiper/modules/pagination.min.mjs';
 
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', function () {
     const introSlider = document.querySelectorAll('.mp-intro .swiper');
     const productsSlider = document.querySelectorAll('.mp-products .swiper');
     const newsSlider = document.querySelectorAll('.mp-news .swiper');

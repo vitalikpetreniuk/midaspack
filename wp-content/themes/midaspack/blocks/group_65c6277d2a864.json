@@ -1,0 +1,190 @@
+{
+  "key": "group_65c6277d2a864",
+  "title": "Information",
+  "fields": [
+    {
+      "key": "field_65c6277d31385",
+      "label": "Загальні налаштування",
+      "name": "",
+      "aria-label": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "wpml_cf_preferences": 0,
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_65c6277d34e23",
+      "label": "Номер телефону 1",
+      "name": "phone1",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "wpml_cf_preferences": 1,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_65c6277d38ada",
+      "label": "Номер телефону 2",
+      "name": "phone2",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "wpml_cf_preferences": 1,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_65c6277d3c467",
+      "label": "Номер телефону 3",
+      "name": "phone3",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "wpml_cf_preferences": 1,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_65c6277d3fd77",
+      "label": "Посилання на facebook",
+      "name": "facebook_link",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "wpml_cf_preferences": 1,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_65c6277d439ab",
+      "label": "Посилання на інстаграм",
+      "name": "instagram_link",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "wpml_cf_preferences": 1,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_65c6277d47463",
+      "label": "Посилання на телеграм",
+      "name": "telegram_link",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "wpml_cf_preferences": 1,
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "information"
+      }
+    ],
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "information2"
+      }
+    ],
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "information"
+      }
+    ],
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "options"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0,
+  "modified": 1707485316
+}
