@@ -47,9 +47,9 @@ get_header();
                     $args = array(
                         'post_type' => 'post',
                         'posts_per_page' => 3,
-                        'post__not_in' => get_the_ID()
+                        'post__not_in' => [get_the_ID()]
                     );
-                    if (get_field('similar_posts')) {
+                    if (get_field('similar_posts') && is_array(get_field('similar_posts'))) {
                         $args['post__in'] = get_field('similar_posts');
                     }
                     $query = new WP_Query($args);
@@ -59,6 +59,7 @@ get_header();
                             renderComponent('news-item');
                         }
                     }
+                    wp_reset_postdata();
                     ?>
 
                 </div>

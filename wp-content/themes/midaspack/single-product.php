@@ -16,7 +16,7 @@ get_header();
 ?>
 
     <main id="primary" class="site-main">
-
+        <?php renderComponent('breadcrumbs'); ?>
         <section class="mp-product">
             <div class="cont">
                 <a href="<?= get_post_type_archive_link('product') ?>"

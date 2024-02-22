@@ -16,11 +16,14 @@
                     </svg>
                 </button>
                 <ul>
-                    <li><a href="tel:<?php the_field('phone1', 'option') ?>"><?php the_field('phone1', 'information') ?></a>
+                    <li>
+                        <a href="tel:<?php the_field('phone1', 'option') ?>"><?php the_field('phone1', 'option') ?></a>
                     </li>
-                    <li><a href="tel:<?php the_field('phone2', 'option') ?>"><?php the_field('phone2', 'information') ?></a>
+                    <li>
+                        <a href="tel:<?php the_field('phone2', 'option') ?>"><?php the_field('phone2', 'option') ?></a>
                     </li>
-                    <li><a href="tel:<?php the_field('phone3', 'option') ?>"><?php the_field('phone3', 'information') ?></a>
+                    <li>
+                        <a href="tel:<?php the_field('phone3', 'option') ?>"><?php the_field('phone3', 'option') ?></a>
                     </li>
                 </ul>
             </div>
@@ -62,7 +65,7 @@
                     </svg>
                 </button>
                 <div class="flex justify-start items-center">
-                    <a href="/" class="mp-logo">
+                    <a href="<?= home_url() ?>" class="mp-logo">
                         <svg width="137" height="34" viewBox="0 0 137 34" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_704_400)">
@@ -105,20 +108,17 @@
                 'container' => false,
                 'menu_class' => 'mpm-nav',
             )) ?>
-            <ul class="mpm-lang mt-[45px]">
-                <li class="ua selected"><a href="#"
-                                           class="bg-[url('../images/svg/uk.svg')] bg-no-repeat bg-[right_2px] pr-[18px]"><span
-                                class="opacity-[.5]">UA</span></a></li>
-                <li class="pl"><a href="#"
-                                  class="bg-[url('../images/svg/en.svg')] bg-no-repeat bg-[right_2px] pr-[18px]"><span
-                                class="opacity-[.5]">EN</span></a></li>
-                <li class="en"><a href="#"
-                                  class="bg-[url('../images/svg/pl.svg')] bg-no-repeat bg-[right_2px] pr-[18px]"><span
-                                class="opacity-[.5]">PL</span></a></li>
-                <li class="de"><a href="#"
-                                  class="bg-[url('../images/svg/de.svg')] bg-no-repeat bg-[right_2px] pr-[18px]"><span
-                                class="opacity-[.5]">DE</span></a></li>
-            </ul>
+            <?php echo do_shortcode('[wpml_language_switcher]
+				<ul class="{{ css_classes }} mpm-lang mt-[45px]">
+                {% for code, language in languages %}
+                <li class="{{code}} {{ language.css_classes }}">
+                    <a class="bg-no-repeat bg-right pr-[18px]" href="{{ language.url }}">
+                        {{ language.display_name | upper }}
+                    </a>
+                </li>
+                {% endfor %}
+                </ul>
+                [/wpml_language_switcher]'); ?>
             <ul class="mpm-social mt-[25px] flex justify-start gap-x-[20px]">
                 <?php if (get_field('facebook_link', 'option')) : ?>
                     <li class="facebook">
