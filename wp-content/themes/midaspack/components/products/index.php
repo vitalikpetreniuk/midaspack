@@ -2,7 +2,7 @@
     <div class="cont">
         <div class="flex justify-between items-center mb-[25px]">
             <h2 class="font-gilroy-bold text-content text-[25px] leading-[1.2]"><?= $args['title'] ?></h2>
-            <a href="<?= get_the_permalink(apply_filters('wpml_object_id', 21, 'page')) ?>"
+            <a href="<?= get_post_type_archive_link('product') ?>"
                class="mp-button mp-button-light h-[40px] leading-[43px]"><?php esc_html_e('go to catalog', 'midas'); ?></a>
         </div>
         <div class="products relative">
