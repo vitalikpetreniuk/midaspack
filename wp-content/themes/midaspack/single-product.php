@@ -58,42 +58,44 @@ get_header();
                     </div>
                     <div class="pm-info">
                         <h1><?php the_title(); ?></h1>
-                        <div class="pm-options">
-                            <div>
-                                <span class="font-proximanova-regular font-regular text-grey text-[16px] leading-[2] uppercase">Розмір</span>
-                                <ul class="product-sizes mt-[5px] flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]">
-                                    <?php
-                                    if (have_rows('sizes')):
-                                        $i = 0;
-                                        while (have_rows('sizes')) : the_row();
-                                            $i++; ?>
-                                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686] <?php if ($i == 1) echo 'selected'; ?>">
-                                                <?php the_sub_field('item'); ?>
-                                            </li>
-                                        <?php
-                                        endwhile;
-                                    endif;
-                                    ?>
-                                </ul>
+                        <?php if (have_rows('sizes') || (have_rows('density'))) : ?>
+                            <div class="pm-options">
+                                <?php if (have_rows('sizes')) : ?>
+                                    <div>
+                                        <span class="font-proximanova-regular font-regular text-grey text-[16px] leading-[2] uppercase"><?php esc_html_e('Size', 'midas'); ?></span>
+                                        <ul class="product-sizes mt-[5px] flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]">
+                                            <?php
+                                            $i = 0;
+                                            while (have_rows('sizes')) : the_row();
+                                                $i++; ?>
+                                                <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686] <?php if ($i == 1) echo 'selected'; ?>">
+                                                    <?php the_sub_field('item'); ?>
+                                                </li>
+                                            <?php
+                                            endwhile;
+                                            ?>
+                                        </ul>
+                                    </div>
+                                <?php endif; ?>
+                                <?php if (have_rows('density')) : ?>
+                                    <div>
+                                        <span class="font-proximanova-regular font-regular text-grey text-[16px] leading-[2] uppercase"><?php esc_html_e('Density', 'midas'); ?></span>
+                                        <ul class="product-sizes mt-[5px] flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]">
+                                            <?php
+                                            $i = 0;
+                                            while (have_rows('density')) : the_row();
+                                                $i++; ?>
+                                                <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686] <?php if ($i == 1) echo 'selected'; ?>">
+                                                    <?php the_sub_field('item'); ?>
+                                                </li>
+                                            <?php
+                                            endwhile;
+                                            ?>
+                                        </ul>
+                                    </div>
+                                <?php endif; ?>
                             </div>
-                            <div>
-                                <span class="font-proximanova-regular font-regular text-grey text-[16px] leading-[2] uppercase">Щільність</span>
-                                <ul class="product-sizes mt-[5px] flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]">
-                                    <?php
-                                    if (have_rows('density')):
-                                        $i = 0;
-                                        while (have_rows('density')) : the_row();
-                                            $i++; ?>
-                                            <li class="cursor-pointer px-[10px] pt-[4px] pb-[3px] rounded-[40px] border border-[#868686] font-proximanova-regular font-normal text-[14px] leading-[1.2] text-[#868686] <?php if ($i == 1) echo 'selected'; ?>">
-                                                <?php the_sub_field('item'); ?>
-                                            </li>
-                                        <?php
-                                        endwhile;
-                                    endif;
-                                    ?>
-                                </ul>
-                            </div>
-                        </div>
+                        <?php endif; ?>
                         <div class="pm-description">
                             <?php the_content(); ?>
                         </div>

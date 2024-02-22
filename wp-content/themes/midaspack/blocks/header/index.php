@@ -16,14 +16,11 @@
                     </svg>
                 </button>
                 <ul>
-                    <li><a href="tel:<?php the_field('phone1', 'option') ?>"><?php the_field('phone1', 'information') ?>
-                            +38 067 828 24 74</a>
+                    <li><a href="tel:<?php the_field('phone1', 'option') ?>"><?php the_field('phone1', 'information') ?></a>
                     </li>
-                    <li><a href="tel:<?php the_field('phone2', 'option') ?>"><?php the_field('phone2', 'information') ?>
-                            +38 067 332 90 70</a>
+                    <li><a href="tel:<?php the_field('phone2', 'option') ?>"><?php the_field('phone2', 'information') ?></a>
                     </li>
-                    <li><a href="tel:<?php the_field('phone3', 'option') ?>"><?php the_field('phone3', 'information') ?>
-                            +38 067 361 45 40</a>
+                    <li><a href="tel:<?php the_field('phone3', 'option') ?>"><?php the_field('phone3', 'information') ?></a>
                     </li>
                 </ul>
             </div>
