@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-white">
+    <div class="bg-white relative">
         <div class="cont">
             <div class="flex justify-between items-center pt-[15px] pb-[15px]">
                 <button class="mobile-menu relative ml-[-10px] box-content p-[10px] mr-[7px]">
@@ -105,8 +105,8 @@
                 'theme_location' => 'header_menu',
                 'container' => false,
                 'menu_class' => 'mpm-nav',
-            )) ?>
-            <?php echo do_shortcode('[wpml_language_switcher]
+                )) ?>
+                <?php echo do_shortcode('[wpml_language_switcher]
 				<ul class="{{ css_classes }} mpm-lang mt-[45px]">
                 {% for code, language in languages %}
                 <li class="{{code}} {{ language.css_classes }}">
@@ -117,8 +117,8 @@
                 {% endfor %}
                 </ul>
                 [/wpml_language_switcher]'); ?>
-            <ul class="mpm-social mt-[25px] flex justify-start gap-x-[20px]">
-                <?php if (get_field('facebook_link', 'option')) : ?>
+                <ul class="mpm-social mt-[25px] flex justify-start gap-x-[20px]">
+                    <?php if (get_field('facebook_link', 'option')) : ?>
                     <li class="facebook">
                         <a href="<?php the_field('facebook_link', 'option') ?>"
                            class="block text-0 text-transparent w-[24px] h-[24px] bg-[url('../images/svg/facebook.svg')] bg-no-repeat hover:bg-[url('../images/svg/facebook-hover.svg')]">fb

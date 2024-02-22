@@ -54,7 +54,7 @@
                         <span><img src="<?php bloginfo('template_url'); ?><?= $catImg ?>" alt=""></span>
                         <div>
                             <h4 class="block title-h4 text-white"><?= $category->name ?></h4>
-                            <a href="<?= get_post_type_archive_link('product') ?>product-category-<?= $category->slug ?>/"
+                            <a href="<?= get_term_link($category) ?>"
                                class="<?= $class2 ?? '' ?>"><?php esc_html_e('More', 'midas'); ?></a>
                         </div>
                     </li>
