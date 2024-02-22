@@ -75,6 +75,7 @@ if(pulsating) {
         body.classList.add('call-onscreen');
     });
 }
+/* Comment */
 if(callPopupButtons) {
     callPopupButtons.forEach((el)=>{
         el.addEventListener('click', function(event) {
