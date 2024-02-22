@@ -215,11 +215,24 @@
         font-light
         text-[15px]/normal
     }
-    .mp-mobile .mpm-lang li.selected {
+    .mp-mobile .mpm-lang li.uk a {
+        @apply bg-[url(../images/svg/uk.svg)]
+
+    }
+    .mp-mobile .mpm-lang li.en a {
+        @apply bg-[url(../images/svg/en.svg)]
+    }
+    .mp-mobile .mpm-lang li.de a {
+        @apply bg-[url(../images/svg/de.svg)]
+    }
+    .mp-mobile .mpm-lang li.pl a {
+        @apply bg-[url(../images/svg/pl.svg)]
+    }
+    .mp-mobile .mpm-lang li.wpml-ls-current-language {
         @apply
         font-proximanova-semibold
     }
-    .mp-mobile .mpm-lang li.selected a span {
+    .mp-mobile .mpm-lang li.wpml-ls-current-language a span {
         @apply
         opacity-100
     }
