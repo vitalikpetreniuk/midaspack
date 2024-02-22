@@ -4,6 +4,7 @@ let body = document.body;
 let blured = document.querySelector('.blured');
 
 let pulsating = document.querySelector('.pulsating');
+/* Comment */
 let callPopupButtons = document.querySelectorAll('.mp-call-book');
 let mobileCall = document.querySelector('.mpm-call');
 let callPopupButtonApproach = document.querySelector('.mp-approach .mp-button');
