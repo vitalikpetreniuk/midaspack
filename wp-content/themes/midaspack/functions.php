@@ -13,5 +13,13 @@ function my_breadcrumb_title_swapper($title, $type, $id)
     if (in_array('home', $type)) {
         $title = __('Home', 'midas');
     }
+    if (in_array('post-product-archive', $type)) {
+        $title = __('Catalog', 'midas');
+    }
     return $title;
 }
+
+add_filter('bcn_breadcrumb_trail_object', function ($bcn_breadcrumb_trail) {
+    var_dump($bcn_breadcrumb_trail);
+    return $bcn_breadcrumb_trail;
+});

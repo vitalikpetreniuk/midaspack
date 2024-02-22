@@ -102,12 +102,6 @@ if(mobileCall) {
         body.classList.add('call-onscreen');
     });
 }
-
-if (callPopupButtonApproach) {
-    callPopupButtonApproach.addEventListener('click', function(event) {
-        body.classList.add('call-onscreen');
-    });
-}
 if (document.querySelector('.mp-text')) {
     document.querySelector('.mp-text .mp-button').addEventListener('click', function(event) {
         toggleHeight();
