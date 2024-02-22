@@ -29,7 +29,7 @@
             </div>
             <div class="mp-lang hidden desktopMin:flex absolute right-[15px] top-[50%] translate-y-[-50%] justify-end">
                 <?php
-                $post_language_details = apply_filters('wpml_post_language_details', NULL, 1);
+                $post_language_details = apply_filters('wpml_post_language_details', NULL);
                 ?>
                 <span class="cursor-pointer <?= $post_language_details['language_code'] ?> bg-no-repeat bg-right pr-[18px] text-white text-[15px] leading-1 font-proximanova-bold current_lang"><?= $post_language_details['display_name'] ?></span>
                 <?php echo do_shortcode('[wpml_language_switcher]
