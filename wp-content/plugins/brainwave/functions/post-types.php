@@ -11,7 +11,7 @@ function register_blog_post_type()
             'back_to_items'     => '← Назад до категорій',
         ],
         'description'           => '', // описание таксономии
-        'public'                => true,
+        'public'                => false,
         // 'publicly_queryable'    => null, // равен аргументу public
         // 'show_in_nav_menus'     => true, // равен аргументу public
         // 'show_ui'               => true, // равен аргументу public
