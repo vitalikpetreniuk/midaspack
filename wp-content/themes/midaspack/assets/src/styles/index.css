@@ -67,7 +67,7 @@
     }
 
     body {
-        @apply flex flex-col min-h-[100vh] pt-[102px] desktopMin:pt-0
+        @apply flex flex-col min-h-[100vh] desktopMin:pt-0
     }
     body.blured .blured {
         display: block;
@@ -283,6 +283,25 @@
 }
 
 
+body.fixed-header {
+    padding-top: 70px;
+}
+header.fixed-white {
+    position: relative;
+    filter: none !important;
+}
+header .bg-white {
+    filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.05));
+}
+header.fixed-white .bg-white {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 14;
+}
+
+
 .pagination .prev:hover svg path,
 .pagination .next:hover svg path {
     stroke: white !important;
@@ -492,6 +511,10 @@ footer .wpcf7-form input[type=submit] {
 }
 
 @media only screen and (min-width: 1100px) {
+    body.fixed-header {
+        padding-top: 80px;
+    }
+
     footer .subscribe_form_title {
         max-width: none;
         margin-left: 0;

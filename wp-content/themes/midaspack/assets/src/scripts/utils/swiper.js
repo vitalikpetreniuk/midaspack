@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (productsSlider.length > 0) {
         const swiper = new Swiper('.mp-products .swiper', {
             modules: [Navigation, Pagination],
-            loop: true,
+            loop: false,
             slidesPerView: 1,
             breakpoints: {
                 768: {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (newsSlider.length > 0) {
         const swiper = new Swiper('.mp-news .swiper', {
             modules: [Navigation, Pagination],
-            loop: true,
+            loop: false,
             slidesPerView: 1,
             breakpoints: {
                 768: {
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (newsRecSlider.length > 0) {
         const swiper = new Swiper('.mp-news-recommend .swiper', {
             modules: [Navigation, Pagination],
-            loop: true,
+            loop: false,
             slidesPerView: 1,
             breakpoints: {
                 768: {

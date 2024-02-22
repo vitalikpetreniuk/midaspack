@@ -16,7 +16,14 @@
         top-[24px]
         desktopMin:top-[30px]
         left-[24px]
+        right-[24px]
         desktopMin:left-[36px]
+        desktopMin:right-[36px]
+    }
+    .mp-categories ul li > div h4 {
+        @apply
+        w-full
+        max-w-[60%]
     }
     .mp-categories ul li > img {
         @apply
@@ -69,6 +76,10 @@
         right-0
         h-full
         origin-top-right
+    }
+    .mp-categories ul li:nth-child(1) > span img {
+        @apply
+        object-right
     }
     .mp-categories ul li.hovered:nth-child(1) > span {
         @apply
@@ -161,6 +172,10 @@
         desktopMin:right-[-5%]
         desktopMin:h-[90%]
         desktopMin:origin-bottom-right
+    }
+    .mp-categories ul li:nth-child(6) > span img {
+        @apply
+        object-right
     }
     .mp-categories ul li.hovered:nth-child(6) > span {
         @apply

@@ -60,6 +60,10 @@
         after:bg-no-repeat
         after:bg-center
         after:rounded-[50%]
+
+        hover:after:bg-[url('../images/svg/phone-lb.svg')]
+        hover:after:transition
+        hover:after:duration-100
     }
 }
 

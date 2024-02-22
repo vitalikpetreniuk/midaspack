@@ -3,12 +3,11 @@
 @layer components {
     header {
         @apply
-        fixed
+        static
         z-[14]
         top-0
         left-0
         right-0
-        desktopMin:static
     }
 
     .mp-lang ul li:hover a span {
@@ -24,7 +23,7 @@
         hover:opacity-100
         hover:transition-opacity
     }
-    .mp-nav li.selected {
+    .mp-nav li.current-menu-item {
         @apply
         opacity-[100]
     }
@@ -71,9 +70,9 @@
     }
     .mp-call:hover span {
         @apply
-        !static
-        bg-white
-        bg-[url('../images/svg/phone-lb.svg')]
+        desktopMin:!static
+        desktopMin:bg-white
+        desktopMin:bg-[url('../images/svg/phone-lb.svg')]
     }
 
     .mobile-menu {
@@ -279,11 +278,12 @@
         @apply
         fixed
         z-[101]
+        top-0
         left-0
         right-0
         bottom-0
-        h-[100svh]
-        pt-[110px]
+        /*h-[100vh]*/
+        /*pt-[110px]*/
         box-border
         bg-black/[.37]
         invisible
@@ -394,23 +394,4 @@ body.call-onscreen .blured {
     display: block;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
-}
-
-
-body.fixed-header {
-    padding-top: 105px;
-}
-header.fixed-white {
-    position: relative;
-    filter: none !important;
-}
-header .bg-white {
-    filter: drop-shadow(0px 1px 0px rgba(0, 0, 0, 0.05));
-}
-header.fixed-white .bg-white {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 14;
 }
