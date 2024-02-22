@@ -4,7 +4,8 @@ let body = document.body;
 let blured = document.querySelector('.blured');
 
 let pulsating = document.querySelector('.pulsating');
-let callPopupButton = document.querySelector('.mp-call');
+/* Comment */
+let callPopupButtons = document.querySelectorAll('.mp-call-book');
 let mobileCall = document.querySelector('.mpm-call');
 let callPopupButtonApproach = document.querySelector('.mp-approach .mp-button');
 let closePopupButton = document.querySelector('.mp-close');
@@ -74,10 +75,14 @@ if(pulsating) {
         body.classList.add('call-onscreen');
     });
 }
-if(callPopupButton) {
-    callPopupButton.addEventListener('click', function(event) {
-        body.classList.add('call-onscreen');
-    });
+/* Comment */
+if(callPopupButtons) {
+    callPopupButtons.forEach((el)=>{
+        el.addEventListener('click', function(event) {
+            body.classList.add('call-onscreen');
+        });
+    })
+
 }
 if(closePopupButton) {
     closePopupButton.addEventListener('click', function(event) {
