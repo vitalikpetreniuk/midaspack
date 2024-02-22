@@ -4,4 +4,36 @@
     .with-shadow {
         text-shadow: 0 0 6px rgba(0, 0, 0, .15);
     }
+    .mp-approach ul li {
+        @apply
+        box-border
+        w-full
+        desktopMin:w-1/4
+        min-h-[180px]
+        p-[30px]
+        rounded-[20px]
+    }
+    .mp-approach ul li h3 {
+        @apply
+        flex justify-start items-center
+        font-proximanova-bold
+        text-white
+        text-[20px]/[1.5]
+        desktopMin:text-[18px]/[1.5]
+        desktopMid:text-[24px]/[1.5]
+        uppercase
+    }
+    .mp-approach ul li h3 span {
+        @apply
+        inline-block
+        mt-[2px]
+    }
+    .mp-approach ul li p {
+        @apply
+        pt-[5px]
+        font-proximanova-light
+        text-[14px]/[1.5]
+        text-white
+        drop-shadow-approach
+    }
 }

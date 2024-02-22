@@ -1,13 +1,107 @@
 @tailwind components;
 
 @layer components {
-
-
-    ul.product-sizes .selected {
+    ul.sort {
         @apply
-        text-accent
+        mb-[45px]
+        desktopMin:mb-[35px]
+        flex
+        flex-wrap
+        justify-start
+        items-center
+        gap-[5px]
+        desktopMin:gap-[10px]
+        font-proximanova-bold
+        text-[16px]
+    }
+    ul.sort li {
+        @apply
+        cursor-pointer
+        leading-[1.5]
+        px-[17px]
+        desktopMin:px-[20px]
+        pt-[6px]
+        pb-[5px]
+        rounded-[20px]
+        border
+    }
+    ul.sort li:nth-child(6n+1) {
+        @apply
+        border-[#58AAEB]
+        text-[#58AAEB]
+    }
+    ul.sort li:nth-child(6n+2) {
+        @apply
+        border-[#3C5A9A]
+        text-[#3C5A9A]
+    }
+    ul.sort li:nth-child(6n+3) {
+        @apply
+        border-[#64A1C1]
+        text-[#64A1C1]
+    }
+    ul.sort li:nth-child(6n+4) {
+        @apply
+        border-[#7BB6E0]
+        text-[#7BB6E0]
+    }
+    ul.sort li:nth-child(6n+5) {
+        @apply
+        border-grey
+        text-grey
+    }
+    ul.sort li:nth-child(6n+6) {
+        @apply
         border-accent
-        bg-size
+        text-accent
+    }
+
+    ul.sort li.selected {
+        @apply
+        pl-[36px]
+        text-white
+    }
+    ul.sort li:nth-child(6n+1).selected {
+        @apply
+        bg-[#58AAEB]
+        bg-[url('../images/svg/check1.svg')]
+        bg-no-repeat
+        bg-[11px_center]
+    }
+    ul.sort li:nth-child(6n+2).selected {
+        @apply
+        bg-[#3C5A9A]
+        bg-[url('../images/svg/check2.svg')]
+        bg-no-repeat
+        bg-[11px_center]
+    }
+    ul.sort li:nth-child(6n+3).selected {
+        @apply
+        bg-[#64A1C1]
+        bg-[url('../images/svg/check3.svg')]
+        bg-no-repeat
+        bg-[11px_center]
+    }
+    ul.sort li:nth-child(6n+4).selected {
+        @apply
+        bg-[#7BB6E0]
+        bg-[url('../images/svg/check4.svg')]
+        bg-no-repeat
+        bg-[11px_center]
+    }
+    ul.sort li:nth-child(6n+5).selected {
+        @apply
+        bg-[#868686]
+        bg-[url('../images/svg/check5.svg')]
+        bg-no-repeat
+        bg-[11px_center]
+    }
+    ul.sort li:nth-child(6n+6).selected {
+        @apply
+        bg-[#1E1E5C]
+        bg-[url('../images/svg/check6.svg')]
+        bg-no-repeat
+        bg-[11px_center]
     }
 
     .products {
@@ -20,7 +114,6 @@
         gap-y-[30px]
         desktopMin:gap-y-[25px]
     }
-
     .products .product {
         @apply
         relative
@@ -30,12 +123,10 @@
         h-auto
         pb-[59px]
     }
-
     .products .product.has-price {
         @apply
         pb-[89px]
     }
-
     .products .product .product-image {
         @apply
         h-[330px]
@@ -43,7 +134,6 @@
         rounded-[20px]
         overflow-hidden
     }
-
     .products .product .product-title {
         @apply
         mt-[15px]
@@ -53,12 +143,19 @@
         text-content
         text-[16px]/[1.2]
     }
-
+    .products .product .product-title a {
+        @apply
+        transition
+        duration-100
+    }
+    .products .product .product-title a:hover {
+        @apply
+        text-accent_hover
+    }
     .products .product.has-price .product-title {
         @apply
         h-[39px]
     }
-
     .products .product .product-description {
         @apply
         mt-[7px]
@@ -69,12 +166,10 @@
         text-content
         text-[14px]/[1.5]
     }
-
     .products .product.has-price .product-description {
         @apply
         hidden
     }
-
     .products .product .btm-info .product-price {
         @apply
         hidden
@@ -82,12 +177,16 @@
         text-content
         text-[20px]/[1.2]
     }
-
+    .products .product .btm-info .product-price span {
+        font-family: 'Montserrat', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
     .products .product.has-price .btm-info .product-price {
         @apply
         block
     }
-
     .products .product .btm-info a {
         @apply
         block

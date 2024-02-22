@@ -6,10 +6,12 @@
         </svg>
     </a>
     <span class="nl-date"><?= get_the_date('d.m.Y') ?></span>
-    <div class="nl-title"><?php the_title() ?></div>
+    <div class="nl-title"><a href="<?php the_permalink(); ?>"><?php the_title() ?></a></div>
     <div class="nl-image">
-        <?php the_post_thumbnail('full', array(
-            'class' => 'block w-full h-full object-cover'
-        )); ?>
+        <a href="<?php the_permalink(); ?>">
+            <?php the_post_thumbnail('full', array(
+                'class' => 'block w-full h-full object-cover'
+            )); ?>
+        </a>
     </div>
 </div>

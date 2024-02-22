@@ -34,15 +34,15 @@
                 <span class="cursor-pointer <?= $post_language_details['language_code'] ?> bg-no-repeat bg-right pr-[18px] text-white text-[15px] leading-1 font-proximanova-bold current_lang"><?= $post_language_details['display_name'] ?></span>
                 <?php echo do_shortcode('[wpml_language_switcher]
 				<ul class="{{ css_classes }} language-toggle__list w-0 overflow-hidden flex justify-end gap-x-[20px] font-proximanova-light text-white text-[15px] leading-1">
-					{% for code, language in languages %}
-						<li class="{{code}} {{ language.css_classes }}">
-							<a class="bg-no-repeat bg-right pr-[18px]" href="{{ language.url }}">
-								{{ language.display_name | upper }}
-							</a>
-						</li>
-					{% endfor %}
-				</ul>
-			[/wpml_language_switcher]'); ?>
+                {% for code, language in languages %}
+                <li class="{{code}} {{ language.css_classes }}">
+                    <a class="bg-no-repeat bg-right pr-[18px]" href="{{ language.url }}">
+                        {{ language.display_name | upper }}
+                    </a>
+                </li>
+                {% endfor %}
+                </ul>
+                [/wpml_language_switcher]'); ?>
             </div>
         </div>
     </div>
@@ -95,8 +95,7 @@
                         'menu_class' => 'mp-nav hidden desktopMin:flex pl-[46px] justify-start items-center gap-x-[40px]',
                     )) ?>
                 </div>
-                <button class="mp-call mp-call-book"><?php esc_html_e('Book a consultation', 'midas'); ?> <span><span
-                                class="block w-[22px] h-[22px] bg-[url('../images/svg/phone.svg')] transition duration-100 ease"></span></span>
+                <button class="mp-call mp-call-book"><?php esc_html_e('Book a consultation', 'midas'); ?> <span></span>
                 </button>
             </div>
         </div>
@@ -146,8 +145,7 @@
                     </li>
                 <?php endif; ?>
             </ul>
-            <button class="mpm-call"><?php esc_html_e('Book a consultation', 'midas'); ?> <span><span
-                            class="block w-[22px] h-[22px] bg-[url('../images/svg/phone.svg')] transition duration-100 ease"></span></span>
+            <button class="mpm-call"><?php esc_html_e('Book a consultation', 'midas'); ?> <span></span>
             </button>
         </div>
     </div>

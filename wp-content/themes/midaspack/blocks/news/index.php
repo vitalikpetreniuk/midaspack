@@ -24,11 +24,13 @@
                                     </svg>
                                 </a>
                                 <span class="news-date"><?= get_the_date('d.m.Y') ?></span>
-                                <div class="news-text"><?php the_title(); ?></div>
+                                <div class="news-text"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
                                 <div class="news-image">
-                                    <?php the_post_thumbnail('full', array(
-                                        'class' => 'block w-full h-full object-cover'
-                                    )); ?>
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail('full', array(
+                                            'class' => 'block w-full h-full object-cover'
+                                        )); ?>
+                                    </a>
                                 </div>
                             </div>
                             <?php

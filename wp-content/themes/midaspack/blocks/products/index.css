@@ -9,7 +9,6 @@
     .products .swiper .swiper-wrapper {
         @apply
         h-auto
-        items-start
     }
 
     .products .go-prev, .products .go-next {

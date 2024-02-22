@@ -43,7 +43,7 @@ module.exports = {
                  cornflower: '#3B64A4',
                  celestial: '#B2D6E9',
                  topaz: '#7BB6E0',
-                 graphite: '#7C858D',
+                 graphite: '#275193',
                  intro_after: 'rgba(18, 18, 70, .42)',
                  'arrow-hover': 'rgba(88, 170, 235, 0.10)',
                  date: 'rgba(15, 15, 15, 0.50)',

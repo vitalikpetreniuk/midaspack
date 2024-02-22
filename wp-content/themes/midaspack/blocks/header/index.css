@@ -3,19 +3,17 @@
 @layer components {
     header {
         @apply
-        fixed
+        static
         z-[14]
         top-0
         left-0
         right-0
-        desktopMin:relative
     }
 
     .mp-lang ul li:hover a span {
         @apply
         opacity-100
     }
-
     .mp-nav li {
         @apply
         font-proximanova-light
@@ -25,12 +23,10 @@
         hover:opacity-100
         hover:transition-opacity
     }
-
-    .mp-nav li.active {
+    .mp-nav li.current-menu-item {
         @apply
         opacity-[100]
     }
-
     .mp-call {
         @apply
         flex
@@ -55,7 +51,6 @@
         uppercase
         cursor-pointer
     }
-
     .mp-call > span {
         @apply
         flex
@@ -64,15 +59,20 @@
         rounded-[50%]
         bg-accent/10
         desktopMin:bg-[#E8E8EF]
+        bg-[url('../images/svg/phone.svg')]
         bg-no-repeat
-        bg-right
+        bg-center
         justify-center
         items-center
-    }
 
-    .mp-call:hover span span {
+        transition
+        duration-100
+    }
+    .mp-call:hover span {
         @apply
-        bg-[url('../images/svg/phone-lb.svg')]
+        desktopMin:!static
+        desktopMin:bg-white
+        desktopMin:bg-[url('../images/svg/phone-lb.svg')]
     }
 
     .mobile-menu {
@@ -80,7 +80,6 @@
         relative
         desktopMin:hidden
     }
-
     .mobile-menu .menu-close {
         @apply
         opacity-0
@@ -90,12 +89,10 @@
         translate-x-[-50%]
         translate-y-[-50%]
     }
-
     .mm-open .mobile-menu .menu-burger {
         @apply
         opacity-0
     }
-
     .mm-open .mobile-menu .menu-close {
         @apply
         opacity-100
@@ -128,13 +125,11 @@
         transition
         duration-100
     }
-
     .mp-kyivstar.opened ul {
         @apply
         opacity-100
         visible
     }
-
     .mp-kyivstar ul li a {
         @apply
         flex
@@ -183,24 +178,29 @@
         py-[35px]
         bg-white
     }
-
     .mm-open .mp-mobile {
         @apply
         block
     }
-
     .mp-mobile .mpm-nav {
         @apply
         flex
         flex-col
         gap-y-[20px]
     }
-
     .mp-mobile .mpm-nav li {
         @apply
         font-proximanova-light
         font-light
         text-[18px]/[1.5]
+    }
+    .mp-mobile .mpm-nav li a {
+        @apply
+        text-content/[50%]
+    }
+    .mp-mobile .mpm-nav li.current-menu-item a {
+        @apply
+        text-content
     }
 
     .mp-mobile .mpm-lang {
@@ -209,20 +209,17 @@
         justify-start
         gap-x-[22px]
     }
-
     .mp-mobile .mpm-lang li {
         @apply
         font-proximanova-light
         font-light
         text-[15px]/normal
     }
-
-    .mp-mobile .mpm-lang li.active {
+    .mp-mobile .mpm-lang li.selected {
         @apply
         font-proximanova-semibold
     }
-
-    .mp-mobile .mpm-lang li.active a span {
+    .mp-mobile .mpm-lang li.selected a span {
         @apply
         opacity-100
     }
@@ -242,7 +239,6 @@
         pr-[6px]
         rounded-[40px]
         bg-accent
-        hover:bg-accent_hover
         transition
         duration-100
         font-proximanova-bold
@@ -251,7 +247,19 @@
         uppercase
         cursor-pointer
     }
-
+    .mp-mobile .mpm-call > span {
+        @apply
+        flex
+        w-[40px]
+        h-[40px]
+        rounded-[50%]
+        bg-accent
+        bg-[url('../images/svg/phone.svg')]
+        bg-no-repeat
+        bg-right
+        justify-center
+        items-center
+    }
     .mp-mobile .mpm-call > span {
         @apply
         flex
@@ -259,8 +267,9 @@
         h-[40px]
         rounded-[50%]
         bg-[#E8E8EF]
+        bg-[url('../images/svg/phone.svg')]
         bg-no-repeat
-        bg-right
+        bg-center
         justify-center
         items-center
     }
@@ -268,12 +277,13 @@
     .mp-popup {
         @apply
         fixed
-        z-[13]
+        z-[101]
+        top-0
         left-0
         right-0
         bottom-0
-        h-[100svh]
-        pt-[110px]
+        /*h-[100vh]*/
+        /*pt-[110px]*/
         box-border
         bg-black/[.37]
         invisible
@@ -281,13 +291,11 @@
         transition
         duration-100
     }
-
     .mp-popup .cont {
         @apply
         relative
         h-full
     }
-
     .mp-popup .cont > div {
         @apply
         absolute
@@ -306,7 +314,6 @@
         justify-start
         gap-x-[20px]
     }
-
     .mp-popup .cont .popup-form {
         @apply
         w-full
@@ -320,15 +327,20 @@
         box-border
         text-content
     }
-
-    .mp-popup .cont .popup-form input[type="tel"] {
+    .mp-popup .cont .popup-form form {
         @apply
-        pl-[30px]
-        bg-[url('../images/svg/uk.svg')]
-        bg-no-repeat
-        bg-[left_11px_center]
+        flex
+        flex-col
+        gap-y-[10px]
+        mt-[25px]
     }
-
+    /*.mp-popup .cont .popup-form input[type="tel"] {*/
+    /*    @apply*/
+    /*    pl-[30px]*/
+    /*    bg-[url('../images/svg/ua.svg')]*/
+    /*    bg-no-repeat*/
+    /*    bg-[left_11px_center]*/
+    /*}*/
     .mp-popup .cont .popup-img {
         @apply
         block
@@ -337,7 +349,6 @@
         desktopMin:relative
         bg-[#B2D6E9]
     }
-
     .mp-popup .cont .popup-img img {
         @apply
         hidden
@@ -347,6 +358,27 @@
         bottom-0
         right-0
     }
+
+    .language-toggle__list .wpml-ls-current-language {
+        @apply
+        !hidden
+    }
+
+    .language-toggle__list .uk a, .current_lang.uk {
+        @apply bg-[url('../images/svg/uk.svg')];
+    }
+
+    .language-toggle__list .en a, .current_lang.en {
+        @apply bg-[url('../images/svg/en.svg')];
+    }
+
+    .language-toggle__list .de a, .current_lang.de {
+        @apply bg-[url('../images/svg/de.svg')];
+    }
+
+    .language-toggle__list .pl a, .current_lang.pl {
+        @apply bg-[url('../images/svg/pl.svg')];
+    }
 }
 
 body.call-onscreen,
@@ -354,12 +386,10 @@ body.mm-open, body.blured {
     height: 100%;
     overflow: hidden;
 }
-
 body.call-onscreen .mp-popup {
     visibility: visible;
     opacity: 1;
 }
-
 body.call-onscreen .blured {
     display: block;
     -webkit-backdrop-filter: blur(5px);

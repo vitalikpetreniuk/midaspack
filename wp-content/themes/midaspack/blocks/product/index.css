@@ -22,7 +22,6 @@
         items-center
         gap-x-[20px]
     }
-
     .product-main .swiper-pagination {
         @apply
         !bottom-[15px]
@@ -36,7 +35,6 @@
         rounded-[20px]
         overflow-hidden
     }
-
     .pm-gallery .swiper-slide {
         @apply
         relative
@@ -46,7 +44,6 @@
         desktopMin:pb-0
         bg-[#E9E9E9]
     }
-
     .pm-gallery .swiper-slide img {
         @apply
         absolute
@@ -56,9 +53,10 @@
         h-full
         object-cover
     }
-
     .pm-gallery .go-prev, .pm-gallery .go-next {
         @apply
+        hidden
+        desktopMin:flex
         mt-0
         top-0
         translate-y-0
@@ -71,12 +69,10 @@
         duration-100
         cursor-pointer
     }
-
     .pm-gallery .go-prev {
         @apply
         left-0
     }
-
     .pm-gallery .go-next {
         @apply
         right-0
@@ -91,7 +87,6 @@
         desktopMin:pl-[30px]
         box-border
     }
-
     .pm-info h1 {
         @apply
         mt-0
@@ -101,7 +96,6 @@
         text-[25px]/[1.2]
         desktopMin:text-[36px]/[1.2]
     }
-
     .pm-info .pm-options {
         @apply
         mb-[25px]
@@ -111,7 +105,6 @@
         gap-x-[65px]
         gap-y-[15px]
     }
-
     .pm-info .pm-description {
         @apply
         mb-[30px]
@@ -121,7 +114,6 @@
         text-[16px]/[1.5]
         text-black
     }
-
     .pm-info .pm-price {
         @apply
         mb-[10px]
@@ -129,7 +121,12 @@
         text-[20px]/[1.2]
         text-content
     }
-
+    .pm-info .pm-price span {
+        font-family: 'Montserrat', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+    }
     .pm-info button {
         @apply
         box-border
@@ -152,9 +149,9 @@
 
     .product-characteristics {
         @apply
-        mt-[75px]
+        mt-[35px]
+        desktopMin:mt-[75px]
         mb-[65px]
-        desktopMin:mb-[75px]
         flex
         flex-col
         desktopMin:flex-row
@@ -162,13 +159,11 @@
         items-start
         gap-x-[20px]
     }
-
     .product-characteristics .pc-video {
         @apply
         mt-[35px]
         desktopMin:mt-0
     }
-
     .product-characteristics .pc-video > div {
         @apply
         relative
@@ -180,21 +175,48 @@
         overflow-hidden
         cursor-pointer
     }
-
     .product-characteristics .pc-video > div video {
         @apply
         absolute
+    }
+
+
+    ul.product-sizes {
+        @apply
+        mt-[5px]
+        flex flex-wrap justify-start items-center gap-x-[5px] gap-y-[5px]
+    }
+    ul.product-sizes li {
+        @apply
+        cursor-pointer
+        px-[10px] pt-[4px] pb-[3px]
+        rounded-[40px]
+        border
+        border-[#868686]
+        text-[#868686]
+        font-proximanova-regular font-normal text-[14px]/[1.2]
+
+        hover:bg-accent/[.1]
+        hover:border-transparent
+        transition
+        duration-100
+    }
+    ul.product-sizes .selected {
+        @apply
+        text-accent
+        border-accent
+        bg-size
+        hover:bg-size
+        hover:border-accent
     }
 }
 
 .pm-gallery .go-prev svg path, .pm-gallery .go-next svg path {
     stroke: white;
 }
-
-.pm-gallery .go-prev {
-    background: linear-gradient(to right, rgba(0, 0, 0, .07) 0%, rgba(0, 0, 0, 0) 100%) no-repeat !important;
+.pm-gallery .go-prev{
+    background: linear-gradient(to right, rgba(0,0,0,.07) 0%,rgba(0,0,0,0) 100%) no-repeat !important;
 }
-
 .pm-gallery .go-next {
-    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, .07) 100%) no-repeat !important;
+    background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,.07) 100%) no-repeat !important;
 }

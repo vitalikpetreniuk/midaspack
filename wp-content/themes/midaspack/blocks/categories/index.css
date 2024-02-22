@@ -9,24 +9,32 @@
         rounded-[40px]
         overflow-hidden
     }
-
     .mp-categories ul li > div {
         @apply
         absolute
+        z-[3]
         top-[24px]
         desktopMin:top-[30px]
         left-[24px]
+        right-[24px]
         desktopMin:left-[36px]
+        desktopMin:right-[36px]
     }
-
-    .mp-categories ul li img {
+    .mp-categories ul li > div h4 {
+        @apply
+        w-full
+        max-w-[60%]
+    }
+    .mp-categories ul li > img {
         @apply
         block
         h-full
         w-full
         object-cover
-    }
 
+        transition
+        duration-150
+    }
     .mp-categories ul li a {
         @apply
         block
@@ -42,5 +50,135 @@
         text-[15px]/[41px]
         uppercase
         bg-white
+    }
+
+
+    .mp-categories ul li > span {
+        @apply
+        block
+        absolute
+        z-[2]
+
+        transition
+        duration-300
+    }
+    .mp-categories ul li > span img {
+        @apply
+        block
+        w-full
+        h-full
+        object-contain
+    }
+
+    .mp-categories ul li:nth-child(1) > span {
+        @apply
+        top-0
+        right-0
+        h-full
+        origin-top-right
+    }
+    .mp-categories ul li:nth-child(1) > span img {
+        @apply
+        object-right
+    }
+    .mp-categories ul li.hovered:nth-child(1) > span {
+        @apply
+        desktopMin:scale-110
+    }
+
+    .mp-categories ul li:nth-child(2) > span {
+        @apply
+        top-[40%]
+        desktopMin:top-[55%]
+        desktopMin:left-0
+        right-0
+        desktopMin:right-auto
+        w-[65%]
+        max-w-[220px]
+        h-auto
+        origin-bottom-left
+    }
+    .mp-categories ul li:nth-child(2) > span img {
+        @apply
+        scale-x-[-1]
+        desktopMin:scale-x-100
+    }
+    .mp-categories ul li.hovered:nth-child(2) > span {
+        @apply
+        desktopMin:scale-[1.07]
+    }
+
+    .mp-categories ul li:nth-child(3) > span {
+        @apply
+        w-[70%]
+        bottom-0
+        left-[51%]
+        desktopMin:w-[85%]
+        desktopMin:left-[50%]
+        desktopMin:translate-x-[-50%]
+        desktopMin:origin-bottom
+    }
+    .mp-categories ul li:nth-child(3) > span img {
+        @apply
+        h-auto
+    }
+    .mp-categories ul li.hovered:nth-child(3) > span {
+        @apply
+        desktopMin:scale-110
+    }
+
+    .mp-categories ul li:nth-child(4) > span {
+        @apply
+        w-[70%]
+        bottom-0
+        left-[51%]
+        desktopMin:w-[85%]
+        desktopMin:left-[50%]
+        desktopMin:translate-x-[-50%]
+        desktopMin:origin-bottom
+    }
+    .mp-categories ul li:nth-child(4) > span img {
+        @apply
+        h-auto
+    }
+    .mp-categories ul li.hovered:nth-child(4) > span {
+        @apply
+        desktopMin:scale-110
+    }
+
+    .mp-categories ul li:nth-child(5) > span {
+        @apply
+        w-[100%]
+        bottom-0
+        left-[10%]
+        desktopMin:left-[50%]
+        desktopMin:translate-x-[-50%]
+        desktopMin:origin-bottom
+    }
+    .mp-categories ul li:nth-child(5) > span img {
+        @apply
+        h-auto
+    }
+    .mp-categories ul li.hovered:nth-child(5) > span {
+        @apply
+        desktopMin:scale-[1.2]
+    }
+
+    .mp-categories ul li:nth-child(6) > span {
+        @apply
+        h-[80%]
+        right-[-8%]
+        bottom-0
+        desktopMin:right-[-5%]
+        desktopMin:h-[90%]
+        desktopMin:origin-bottom-right
+    }
+    .mp-categories ul li:nth-child(6) > span img {
+        @apply
+        object-right
+    }
+    .mp-categories ul li.hovered:nth-child(6) > span {
+        @apply
+        desktopMin:scale-110
     }
 }

@@ -26,19 +26,26 @@
         transition
         duration-100
     }
-
     .go-prev {
         @apply
         left-0
         desktopMin:left-[-45px]
     }
-
     .go-next {
         @apply
         right-0
         desktopMin:right-[-45px]
     }
 
+    .news .swiper {
+        @apply
+        w-full
+    }
+    .news .swiper-wrapper {
+        @apply
+        w-full
+        /*max-w-[100%]*/
+    }
     .news .swiper-slide {
         @apply
         relative
@@ -51,9 +58,9 @@
         desktopMin:pb-[28px]
         bg-[#E9E9E9]
         rounded-[20px]
+        box-border
     }
-
-    .news .swiper-slide a {
+    .news .swiper-slide > a {
         @apply
         absolute
         top-[22px]
@@ -73,33 +80,42 @@
         transition
         duration-100
     }
-
-    .news .swiper-slide a svg {
+    .news .swiper-slide > a svg {
         @apply
         w-[11px]
         desktopMin:w-[17px]
         h-[11px]
         desktopMin:h-[17px]
     }
-
     .news .swiper-slide .news-date {
         @apply
         font-proximanova-light
         font-light
         text-content/[.5]
     }
-
     .news .swiper-slide .news-text {
         @apply
+        h-[72px]
         mt-[15px]
         font-proximanova-semibold
         text-content
         text-[20px]/[24px]
-        h-auto
-        desktopMin:h-[72px]
+    }
+    .news .swiper-slide .news-text a {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        @apply
+        w-full
+        transition
+        duration-100
         overflow-hidden
     }
-
+    .news .swiper-slide .news-text a:hover {
+        @apply
+        text-accent_hover
+    }
     .news .swiper-slide .news-image {
         @apply
         h-[160px]

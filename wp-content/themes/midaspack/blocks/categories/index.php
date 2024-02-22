@@ -9,26 +9,32 @@
                     $i++;
                     switch ($i) {
                         case 1 :
+                            $catImg = '/assets/images/categories/cat1.png';
                             $class1 = 'bg-accent_hover';
                             $class2 = 'hover:text-accent_hover';
                             break;
                         case 2 :
+                            $catImg = '/assets/images/categories/cat2.png';
                             $class1 = 'bg-cornflower';
                             $class2 = 'hover:text-cornflower';
                             break;
                         case 3 :
+                            $catImg = '/assets/images/categories/cat3.png';
                             $class1 = 'bg-celestial';
                             $class2 = 'hover:text-celestial';
                             break;
                         case 4 :
+                            $catImg = '/assets/images/categories/cat4.png';
                             $class1 = 'bg-topaz';
                             $class2 = 'hover:text-topaz';
                             break;
                         case 5 :
+                            $catImg = '/assets/images/categories/cat5.png';
                             $class1 = 'bg-graphite';
                             $class2 = 'hover:text-graphite';
                             break;
                         case 6 :
+                            $catImg = '/assets/images/categories/cat6.png';
                             $class1 = 'bg-accent';
                             $class2 = 'hover:text-accent';
                             break;
@@ -44,7 +50,9 @@
                     ?>
                     <li class="w-full <?= $class ?> <?= $class1 ?? '' ?>">
                         <?= wp_get_attachment_image(get_sub_field('image'), 'full') ?>
-                        <div class="!top-auto bottom-[24px] desktopMin:bottom-[30px]">
+                        <!-- потрібно посадити картинку -->
+                        <span><img src="<?php bloginfo('template_url'); ?><?= $catImg ?>" alt=""></span>
+                        <div>
                             <h4 class="block title-h4 text-white"><?= $category->name ?></h4>
                             <a href="<?= get_term_link($category) ?>"
                                class="<?= $class2 ?? '' ?>"><?php esc_html_e('More', 'midas'); ?></a>

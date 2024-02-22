@@ -7,7 +7,6 @@
         flex-wrap
         gap-[20px]
     }
-
     .news .nl-item {
         @apply
         relative
@@ -24,8 +23,7 @@
         bg-[#F8F8F8]
         rounded-[20px]
     }
-
-    .news .nl-item a {
+    .news .nl-item > a {
         @apply
         absolute
         top-[22px]
@@ -45,8 +43,7 @@
         transition
         duration-100
     }
-
-    .news .nl-item a svg {
+    .news .nl-item > a svg{
         @apply
         block
         w-[11px]
@@ -54,7 +51,6 @@
         h-[11px]
         desktopMin:h-[17px]
     }
-
     .news .nl-item .nl-date {
         @apply
         font-proximanova-light
@@ -62,7 +58,6 @@
         text-[16px]/[1]
         text-content/[.5]
     }
-
     .news .nl-item .nl-title {
         @apply
         mt-[8px]
@@ -71,9 +66,22 @@
         text-content
         text-[20px]/[1.2]
         h-[72px]
+    }
+    .news .nl-item .nl-title a {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+
+        @apply
+        w-full
+        transition
+        duration-100
         overflow-hidden
     }
-
+    .news .nl-item .nl-title a:hover {
+        @apply
+        text-accent_hover
+    }
     .news .nl-item .nl-image {
         @apply
         h-[200px]
@@ -82,33 +90,7 @@
         rounded-[20px]
         overflow-hidden
     }
-
-
-    .pagination .prev svg path,
-    .pagination .next svg path {
-        @apply
-        transition
-        duration-100
-    }
-
-    .pagination .prev {
-        margin-right: 20px;
-    }
-
-    .pagination .next {
-        margin-left: 20px;
-    }
-
-    .pagination .page-numbers:not(.prev, .next) {
-        @apply block px-[6px];
-    }
-
-    .pagination .page-numbers:not(.prev, .next).current {
-        @apply rounded-[10px] h-[22px] bg-accent text-white;
-    }
 }
-
-.pagination .prev:hover svg path,
-.pagination .next:hover svg path {
+.pagination > span:hover a svg path {
     stroke: white;
 }

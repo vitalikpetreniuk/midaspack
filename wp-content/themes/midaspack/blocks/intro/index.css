@@ -4,6 +4,9 @@
     .mp-intro .swiper-slide {
         @apply
         relative
+        h-[calc(100vh-102px)]
+        desktopMax:h-[calc(100vh-110px)]
+        desktopMax:max-h-[685px]
 
         after:content-['']
         after:block
@@ -14,27 +17,16 @@
         after:h-full
         after:bg-intro_after
     }
-
     .mp-intro .swiper-pagination {
         @apply
         !bottom-[35px]
     }
-
     .mp-intro .swiper-pagination-bullet:after {
         @apply
         !bg-white/50
     }
-
     .mp-intro .swiper-pagination-bullet-active:after {
         @apply
         !bg-white/100
     }
-}
-
-.h-screen-102 {
-    height: calc(100vh - 102px);
-}
-
-.max-h-screen-102 {
-    max-height: calc(100vh - 102px);
 }
