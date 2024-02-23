@@ -44,7 +44,7 @@
         </ul>
         <div class="mt-[20px] desktopMin:mt-[35px] flex flex-col items-center desktopMin:items-end gap-y-[10px]">
             <span class="font-proximanova-light font-light text-content text-[14px]/[1.5]"><?php esc_html_e('Did you find something for yourself', 'midas'); ?>?</span>
-            <button class="mp-button mp-call-popup"><?php esc_html_e('Book a consultation', 'midas'); ?></button>
+            <button class="mp-button mp-call-popup mp-call-book"><?php esc_html_e('Book a consultation', 'midas'); ?></button>
         </div>
     </div>
 </section>

@@ -13,11 +13,11 @@ function register_blog_post_type()
         'description'           => '', // описание таксономии
         'public'                => false,
         // 'publicly_queryable'    => null, // равен аргументу public
-        // 'show_in_nav_menus'     => true, // равен аргументу public
-        // 'show_ui'               => true, // равен аргументу public
-        // 'show_in_menu'          => true, // равен аргументу show_ui
-        // 'show_tagcloud'         => true, // равен аргументу show_ui
-        // 'show_in_quick_edit'    => null, // равен аргументу show_ui
+         'show_in_nav_menus'     => true, // равен аргументу public
+         'show_ui'               => true, // равен аргументу public
+         'show_in_menu'          => true, // равен аргументу show_ui
+         'show_tagcloud'         => true, // равен аргументу show_ui
+         'show_in_quick_edit'    => null, // равен аргументу show_ui
         'hierarchical'          => false,
 
         'rewrite'               => true,

@@ -4755,16 +4755,8 @@ video {
   background-image:url('../images/about-bg-mobile.png')
 }
 
-.bg-\[url\(\'\.\.\/images\/svg\/de\.svg\'\)\]{
-  background-image:url('../images/svg/de.svg')
-}
-
 .bg-\[url\(\'\.\.\/images\/svg\/email\.svg\'\)\]{
   background-image:url('../images/svg/email.svg')
-}
-
-.bg-\[url\(\'\.\.\/images\/svg\/en\.svg\'\)\]{
-  background-image:url('../images/svg/en.svg')
 }
 
 .bg-\[url\(\'\.\.\/images\/svg\/facebook\.svg\'\)\]{
@@ -4787,16 +4779,8 @@ video {
   background-image:url('../images/svg/phone-white.svg')
 }
 
-.bg-\[url\(\'\.\.\/images\/svg\/pl\.svg\'\)\]{
-  background-image:url('../images/svg/pl.svg')
-}
-
 .bg-\[url\(\'\.\.\/images\/svg\/telegram\.svg\'\)\]{
   background-image:url('../images/svg/telegram.svg')
-}
-
-.bg-\[url\(\'\.\.\/images\/svg\/uk\.svg\'\)\]{
-  background-image:url('../images/svg/uk.svg')
 }
 
 .bg-cover{
@@ -4809,10 +4793,6 @@ video {
 
 .bg-\[left_16px_center\]{
   background-position:left 16px center
-}
-
-.bg-\[right_2px\]{
-  background-position:right 2px
 }
 
 .bg-bottom{
@@ -5171,10 +5151,6 @@ video {
 
 .opacity-50{
   opacity:0.5
-}
-
-.opacity-\[\.5\]{
-  opacity:.5
 }
 
 .transition{

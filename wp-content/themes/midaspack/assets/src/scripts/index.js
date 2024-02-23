@@ -179,11 +179,11 @@ function toggleHeight() {
     if (outerDiv.style.height === '150px' || outerDiv.style.height === '') {
         outerDiv.style.height = innerDiv.clientHeight + 'px';
         outerDiv.classList.add('no-fade');
-        toggleButton.textContent = 'Менше';
+        toggleButton.textContent = backendvars.text_less;
     } else {
         outerDiv.style.height = '150px';
         outerDiv.classList.remove('no-fade');
-        toggleButton.textContent = 'Більше';
+        toggleButton.textContent = backendvars.text_more;
     }
 }
 function addRemoveClassOnHover() {

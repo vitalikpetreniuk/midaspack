@@ -31,7 +31,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="title-h4 desktopMin:mb-[15px]">Соціальні мережі</h4>
+                    <h4 class="title-h4 desktopMin:mb-[15px]"><?php esc_html_e('Socials','midas'); ?></h4>
                     <ul class="mp-social flex justify-start gap-x-[20px]">
                         <?php if (get_field('facebook_link', 'option')) : ?>
                             <li class="facebook">
