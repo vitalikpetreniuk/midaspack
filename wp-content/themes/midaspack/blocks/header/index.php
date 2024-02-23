@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-white">
+    <div class="bg-white relative">
         <div class="cont">
             <div class="flex justify-between items-center pt-[15px] pb-[15px]">
                 <button class="mobile-menu relative ml-[-10px] box-content p-[10px] mr-[7px]">
@@ -99,16 +99,14 @@
                 </button>
             </div>
         </div>
-    </div>
-
-    <div class="mp-mobile hidden">
-        <div>
-            <?php wp_nav_menu(array(
+        <div class="mp-mobile hidden">
+            <div>
+                <?php wp_nav_menu(array(
                 'theme_location' => 'header_menu',
                 'container' => false,
                 'menu_class' => 'mpm-nav',
-            )) ?>
-            <?php echo do_shortcode('[wpml_language_switcher]
+                )) ?>
+                <?php echo do_shortcode('[wpml_language_switcher]
 				<ul class="{{ css_classes }} mpm-lang mt-[45px]">
                 {% for code, language in languages %}
                 <li class="{{code}} {{ language.css_classes }}">
@@ -119,33 +117,35 @@
                 {% endfor %}
                 </ul>
                 [/wpml_language_switcher]'); ?>
-            <ul class="mpm-social mt-[25px] flex justify-start gap-x-[20px]">
-                <?php if (get_field('facebook_link', 'option')) : ?>
+                <ul class="mpm-social mt-[25px] flex justify-start gap-x-[20px]">
+                    <?php if (get_field('facebook_link', 'option')) : ?>
                     <li class="facebook">
                         <a href="<?php the_field('facebook_link', 'option') ?>"
                            class="block text-0 text-transparent w-[24px] h-[24px] bg-[url('../images/svg/facebook.svg')] bg-no-repeat hover:bg-[url('../images/svg/facebook-hover.svg')]">fb
                         </a>
                     </li>
-                <?php endif; ?>
-                <?php if (get_field('telegram_link', 'option')) : ?>
+                    <?php endif; ?>
+                    <?php if (get_field('telegram_link', 'option')) : ?>
                     <li class="telegram">
                         <a href="<?php the_field('telegram_link', 'option') ?>"
                            class="block text-0 text-transparent w-[24px] h-[24px] bg-[url('../images/svg/telegram.svg')] bg-no-repeat hover:bg-[url('../images/svg/telegram-hover.svg')]">tlgrm
                         </a>
                     </li>
-                <?php endif; ?>
-                <?php if (get_field('instagram_link', 'option')) : ?>
+                    <?php endif; ?>
+                    <?php if (get_field('instagram_link', 'option')) : ?>
                     <li class="instagram">
                         <a href="<?php the_field('instagram_link', 'option') ?>"
                            class="block text-0 text-transparent w-[24px] h-[24px] bg-[url('../images/svg/instagram.svg')] bg-no-repeat hover:bg-[url('../images/svg/instagram-hover.svg')]">inst
                         </a>
                     </li>
-                <?php endif; ?>
-            </ul>
-            <button class="mpm-call"><?php esc_html_e('Book a consultation', 'midas'); ?> <span></span>
-            </button>
+                    <?php endif; ?>
+                </ul>
+                <button class="mpm-call"><?php esc_html_e('Book a consultation', 'midas'); ?> <span></span>
+                </button>
+            </div>
         </div>
     </div>
+
 </header>
 <div class="blured hidden fixed top-0 left-0 right-0 bottom-0 z-[12]"></div>
 

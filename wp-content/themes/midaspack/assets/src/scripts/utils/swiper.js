@@ -4,13 +4,13 @@ import Navigation from '../../../../../../plugins/brainwave/assembly/node_module
 import Pagination from '../../../../../../plugins/brainwave/assembly/node_modules/swiper/modules/pagination.min.mjs';
 
 document.addEventListener('DOMContentLoaded', function () {
-    const introSlider = document.querySelectorAll('.mp-intro .swiper');
-    const productsSlider = document.querySelectorAll('.mp-products .swiper');
-    const newsSlider = document.querySelectorAll('.mp-news .swiper');
-    const newsRecSlider = document.querySelectorAll('.mp-news-recommend .swiper');
-    const productImages = document.querySelectorAll('.mp-product .swiper');
-    if (introSlider.length > 0) {
-        const swiper = new Swiper('.mp-intro .swiper', {
+    const introSlider = document.querySelector('.mp-intro .swiper');
+    const productsSlider = document.querySelector('.mp-products .swiper');
+    const newsSlider = document.querySelector('.mp-news .swiper');
+    const newsRecSlider = document.querySelector('.mp-news-recommend .swiper');
+    const productImages = document.querySelector('.mp-product .swiper');
+    if (introSlider) {
+        const swiper = new Swiper(introSlider, {
             modules: [Autoplay, Pagination],
             centeredSlides: true,
             loop: true,
@@ -24,8 +24,8 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
-    if (productsSlider.length > 0) {
-        const swiper = new Swiper('.mp-products .swiper', {
+    if (productsSlider) {
+        const swiper = new Swiper(productsSlider, {
             modules: [Navigation, Pagination],
             loop: false,
             slidesPerView: 1,
@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.mp-products .swiper-button-next').click();
         });
     }
-    if (newsSlider.length > 0) {
-        const swiper = new Swiper('.mp-news .swiper', {
+    if (newsSlider) {
+        const swiper = new Swiper(newsSlider, {
             modules: [Navigation, Pagination],
             loop: false,
             slidesPerView: 1,
@@ -83,10 +83,10 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.mp-news .swiper-button-next').click();
         });
     }
-    if (newsRecSlider.length > 0) {
-        const swiper = new Swiper('.mp-news-recommend .swiper', {
+    if (newsRecSlider) {
+        const swiper = new Swiper(newsRecSlider, {
             modules: [Navigation, Pagination],
-            loop: false,
+            loop: true,
             slidesPerView: 1,
             breakpoints: {
                 768: {
@@ -114,8 +114,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.querySelector('.mp-news-recommend .swiper-button-next').click();
         });
     }
-    if (productImages.length > 0) {
-        const swiper = new Swiper('.mp-product .swiper', {
+    if (productImages) {
+        const swiper = new Swiper(productImages, {
             modules: [Navigation, Pagination],
             loop: true,
             pagination: {

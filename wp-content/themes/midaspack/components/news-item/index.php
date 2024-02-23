@@ -1,4 +1,4 @@
-<div class="nl-item">
+<div class="nl-item swiper-slide">
     <a href="<?php the_permalink(); ?>">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none">
             <path d="M1.5 1.5H18.5M18.5 1.5V18.5M18.5 1.5L1.5 18.5" stroke="white"
