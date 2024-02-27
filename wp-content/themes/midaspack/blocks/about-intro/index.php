@@ -1,6 +1,8 @@
 <section class="mp-about-intro">
     <div class="cont">
-        <h2 class="title-h2"><?php the_title(); ?></h2>
+        <?php if (!get_field('hide_title')) : ?>
+            <h2 class="title-h2"><?php the_title(); ?></h2>
+        <?php endif; ?>
 
         <h2 class="title-h2 mt-[25px] desktopMin:mt-[30px]"><?php the_field('title') ?></h2>
         <div class="mt-[10px]">
