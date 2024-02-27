@@ -39,22 +39,21 @@
                             $class2 = 'hover:text-accent';
                             break;
                     }
-                    /* @var WP_Term $category */
-                    $category = get_sub_field('category');
+                    $page = get_sub_field('page');
                     if (get_sub_field('size') == 'half') {
                         $class = 'tabletMin:w-half-gap';
                     } else {
                         $class = 'tabletMin:w-half-gap desktopMin:w-quarter-gap';
                     }
-                    if (!$category) continue;
+                    if (!$page) continue;
                     ?>
                     <li class="w-full <?= $class ?> <?= $class1 ?? '' ?>">
                         <?= wp_get_attachment_image(get_sub_field('image'), 'full') ?>
                         <!-- потрібно посадити картинку -->
                         <span><img src="<?php bloginfo('template_url'); ?><?= $catImg ?>" alt=""></span>
                         <div>
-                            <h4 class="block title-h4 text-white"><?= $category->name ?></h4>
-                            <a href="<?= get_post_type_archive_link('product') ?>product-category-<?= $category->slug ?>/"
+                            <h4 class="block title-h4 text-white"><?= get_the_title($page) ?></h4>
+                            <a href="<?= get_the_permalink($page) ?>"
                                class="<?= $class2 ?? '' ?>"><?php esc_html_e('More', 'midas'); ?></a>
                         </div>
                     </li>

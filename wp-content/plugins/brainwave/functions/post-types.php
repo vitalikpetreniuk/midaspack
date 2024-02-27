@@ -45,6 +45,21 @@ function register_blog_post_type()
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'), // Поддерживаемые поля и функции
         'show_in_rest' => true,
     ]);
+
+    register_post_type('categories', [
+        'label' => 'Сторінки категорій',
+        'labels' => array(
+            'name' => 'Сторінки категорій',
+            'singular_name' => 'Сторінка категорії',
+            'menu_name' => 'Сторінки категорій',
+            'all_items' => 'Всі сторінки категорій',
+            'new_item' => 'Нова сторінка категорій',
+        ),
+        'public' => true, // Доступность типа записи в публичной части сайта
+        'has_archive' => 'products', // Архив типа записи
+        'supports' => array('title', 'editor', 'excerpt', 'thumbnail'), // Поддерживаемые поля и функции
+        'show_in_rest' => true,
+    ]);
 }
 //
 //function custom_post_type() {
