@@ -56,7 +56,7 @@ function register_blog_post_type()
             'new_item' => 'Нова сторінка категорій',
         ),
         'public' => true, // Доступность типа записи в публичной части сайта
-        'has_archive' => 'products', // Архив типа записи
+        'has_archive' => false, // Архив типа записи
         'supports' => array('title', 'editor', 'excerpt', 'thumbnail'), // Поддерживаемые поля и функции
         'show_in_rest' => true,
     ]);
